@@ -1,0 +1,98 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.Security;
+
+public partial class Employee_MyTaskDetail : MyPermisionPage
+{
+    OnlineSchoolEntities km = new OnlineSchoolEntities();
+
+    protected override void OnPreInit(EventArgs e)
+    {
+        MyPer = "MyTaskDetail";
+        base.OnPreInit(e);
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+       isDone();
+        var userId = Membership.GetUser().UserName;
+        if (!IsPostBack)
+        {
+            if (Request.QueryString["Taskid"] != null && Request.QueryString["userId"] != null)
+            {
+                int Taskid = int.Parse(Request.QueryString["Taskid"].ToString());
+                string uId = Request.QueryString["userId"].ToString();
+                var ta = (from k in km.UsersTasks
+                              where k.TaskId== Taskid && k.UserId== uId
+                          select new
+                               {
+                                   TitleTask = (from x in km.Tasks where x.Id == k.TaskId select x.Title).FirstOrDefault(),
+                                   DescriptionTask = (from x in km.Tasks where x.Id == k.TaskId select x.Description).FirstOrDefault(),
+                                   EndDate = (from x in km.Tasks where x.Id == k.TaskId select x.EndDate).FirstOrDefault(),
+                                   k.UserId,
+                                   k.Report,
+                                   k.IsDone
+                               }).FirstOrDefault();
+
+                txtDate.Text =MyDate.getDate(ta.EndDate.ToString()) ;
+
+                txtDescription.Text = ta.DescriptionTask;
+
+                txtTaskTitel.Text = ta.TitleTask;
+                if(ta.Report!=null)
+                {
+                    txtReport.Text = ta.Report;
+                }
+                //if (ta.isDone == true)
+                //{
+                //    lblDone.Text = "تم الانتهاء من المهمة";
+                //    lblDone.CssClass = "btn btn-success";
+                //}
+            }
+        }
+    }
+
+    protected void btnDone_Click(object sender, EventArgs e)
+    {
+        int Taskid = int.Parse(Request.QueryString["Taskid"].ToString());
+        var userId = Membership.GetUser().UserName;
+       lblmsg.Visible = true;
+              lblmsg.Text = "تم اتمام المهمة";
+               
+                var IsDone = (from j in km.UsersTasks where j.UserId == userId && j.TaskId==Taskid select j).FirstOrDefault();
+                IsDone.IsDone = true;
+                IsDone.Report = txtReport.Text;
+                km.SaveChanges();
+       
+        
+
+        
+    }
+    public void isDone()
+    {
+        int Taskid = int.Parse(Request.QueryString["Taskid"].ToString());
+        var userId = Membership.GetUser().UserName;
+        var IsDone = (from j in km.UsersTasks where j.UserId == userId && j.TaskId == Taskid select j).FirstOrDefault();
+        if(IsDone.IsDone ==true)
+        {
+            lblDone.Text = "تم الانتهاء من المهمة";
+            lblDone.CssClass = "btn btn-success";
+            btnDone.Visible = false;
+        }
+        else
+        {
+            lblDone.Text = "لم يتم الانتهاء من المهمة";
+            lblDone.CssClass = "btn btn-danger";
+            btnDone.Visible = true;
+        }
+    }
+
+    protected void btnBake_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("MyTasks.aspx");
+    }
+}

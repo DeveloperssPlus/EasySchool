@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class Employee_MyMaintenanceRequest : MyPermisionPage
+{
+    protected override void OnPreInit(EventArgs e)
+    {
+        MyPer = "MyMaintenanceRequest";
+        base.OnPreInit(e);
+    }
+
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+}

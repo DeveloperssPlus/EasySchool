@@ -1,0 +1,125 @@
+@media all {
+	.page-break	{ display: block; }
+}
+
+@media print {
+.page-break	{ display: block; page-break-before: always; }
+table,th,td{
+    border: 1px solid #000;
+    border-collapse: collapse;
+    text-align: center;
+}
+table th{
+    font-size: 15px;
+}    
+}
+.title {
+    height:80px;
+    background-color:#467553;
+	color:white;
+}
+.title h2{
+    padding-right:40px;
+    text-align: right;
+}
+.content .sub-title h4,
+.content .end{
+    padding: 10px 40px;
+    text-align: right;
+}
+.content .sub-title h4{
+    color: #467553;
+}
+.table3 table,.table4-1 table,.table4-2 table,.table4-3 table,.table4-4 table,.table17 table,.table19 table{
+    width: 75%;
+    margin: 10px;
+}
+table,th,td{
+    border: 1px solid #000;
+    border-collapse: collapse;
+    text-align: center;
+}
+table th{
+    font-size: 15px;
+}
+.table3 table,
+.table3 table tbody td,
+.table3 table thead th{
+    padding: 10px;  
+}
+.table19 table tbody td{
+    padding: 20px;
+}
+.table4-1 table th,
+.table4-2 table th,
+.table4-3 table th,
+.table4-4 table th,
+.table4-4 table td,
+.table17 table td,
+.table19 table th{
+    padding: 3px;
+}
+.table3 table thead,.table4-4 table thead,.table17 table thead,.table19 table th{
+    background: #658C6F;
+    color: #fff;
+}
+.table3 table thead th:first-child{
+    width: 40px;
+}
+.table3 table tbody tr:nth-child(even),
+.table17 table tbody tr:nth-child(even){
+    background-color: #D2DED2;
+}
+.table3 table tbody tr:nth-child(odd),
+.table17 table tbody tr:nth-child(odd),
+.table19 table tbody tr{
+   background-color: #EBF0EA;
+}
+.table4-1 table th:nth-child(even){
+    background-color: #EBF0EA;
+    color: #fff;
+}
+.table4-1 table th:nth-child(odd){
+    background-color: #658C6F;
+    color: #fff;
+    width: 20%;
+}
+.table4-2 table th:first-child{
+    background-color: #658C6F;
+    color: #fff;
+    width: 20%;
+}
+.table4-2 table th,.table4-3 table th{
+    background-color: #EBF0EA;
+    color: #fff;
+}
+.table4-3 table th:first-child{
+    background-color: #658C6F;
+    color: #fff;
+    width: 30%;
+}
+.table4-4 table thead th tr{
+    width: 40%;
+}
+.content .sub-par{
+    text-align: right;
+    padding-right: 45px;
+}
+.content .text{
+	margin: 10px;
+    padding-right: 30px;
+    text-align: justify;
+}
+.table2 table tbody h5,
+.table21 table tbody h5{
+    margin-top:2px;
+    margin-bottom:2px;
+}
+.table2 table tbody	th,
+.table21 table tbody th{
+    padding:2px;
+}
+.table2 table tbody td,
+.table21 table tbody td{
+    padding:15px;
+}

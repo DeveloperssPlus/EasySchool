@@ -1,0 +1,431 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar-sa" class="rtl" dir="rtl">
+<!DOCTYPE html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content="admin-themes-lab" />
+    <meta name="author" content="themes-lab" />
+    <link rel="shortcut icon" href="images/favicon-96x96.png" type="image/png" />
+    <title>Easy School</title>
+    <link href="<%=Page.ResolveUrl("~/")%>assets/global/css/style.css" rel="stylesheet" />
+    <link href="<%=Page.ResolveUrl("~/")%>assets/global/css/theme.css" rel="stylesheet" />
+    <link href="<%=Page.ResolveUrl("~/")%>assets/global/css/ui.css" rel="stylesheet" />
+
+    <link href="<%=Page.ResolveUrl("~/")%>assets/admin/layout1/css/layout.css" rel="stylesheet" />
+    <!-- BEGIN PAGE STYLE -->
+    <link href="<%=Page.ResolveUrl("~/")%>assets/global/plugins/datatables/dataTables.min.css" rel="stylesheet" />
+    <!--<link href="plugins/slider-pips/jquery-ui-slider-pips.css" rel="stylesheet">-->
+    <link href="<%=Page.ResolveUrl("~/")%>assets/admin/page-builder/plugins/slider-pips/jquery-ui-slider-pips.css" rel="stylesheet" />
+    <link href="<%=Page.ResolveUrl("~/")%>assets/admin/page-builder/custom-style.css" rel="stylesheet" />
+    <!--<link href="custom-style.css" rel="stylesheet">-->
+    <!-- END PAGE STYLE -->
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/jquery/jquery-1.11.1.min.js"></script>
+
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/noty/jquery.noty.packaged.min.js"></script>
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/js/pages/notifications.js"></script>
+
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        function addSuccess(text) {
+            NotifContent = $('#preview').find('.alert').html(),
+          autoClose = true;
+            type = 'success';
+            notifContent = '<div class="alert alert-success media fade in  pull-right"><p> ' + text + '.</p></div>';
+            method = 3000;
+            position = 'topCenter';
+            container = '';
+            generate(position, container, notifContent, true, type);
+        }
+
+        function addfalied(text) {
+            NotifContent = $('#preview').find('.alert').html(),
+          autoClose = true;
+            type = 'danger';
+            notifContent = '<div class="alert alert-danger media fade in pull-right"><p> ' + text + '.</p></div>';
+            method = 3000;
+            container = '';
+            position = 'topCenter';
+            generate(position, container, notifContent, true, type);
+        }
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body class="rtl color-default builder-page">
+
+    <form id="form1" runat="server">
+        <section>
+            <div class="main-content ">
+                <!-- BEGIN TOPBAR -->
+                <nav class="navbar navbar-default topbar ">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">
+                                <!--img alt="Brand" src="images/logo2.png"-->
+                            </a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="first">
+                            <div class="header-right">
+                                <ul class="header-menu nav navbar-nav hidden-xs">
+                       <%--             <li class="dropdown" id="language-header">
+                                        <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"><i class="icon-globe"></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <asp:LinkButton ID="lnkHijri" runat="server" OnClick="lnkHijri_Click"><span>هجري</span></asp:LinkButton>
+                                            </li>
+                                            <li>
+                                                <asp:LinkButton ID="lnkGregorian" runat="server" OnClick="lnkGregorian_Click"><span>ميلادي</span></asp:LinkButton>
+                                            </li>
+                                        </ul>
+                                    </li>--%>
+                                    <li class="dropdown" id="notifications-header">
+                                        <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"><i class="icon-bell"></i><span class="badge badge-danger badge-header"><%--6--%></span> </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-header clearfix">
+                                                <p class="pull-left">الاشعارات </p>
+                                            </li>
+                                            <li>
+                                                <ul class="dropdown-menu-list withScroll" data-height="220">
+                                                    <li>
+                                                        <%--    <a href="#">
+                                                    <i class="fa fa-star p-r-10 f-18 c-orange"></i>
+                                                    Steve have rated your photo
+                       
+                                                    <span class="dropdown-time">Just now</span>
+                                                </a>--%>
+                                                لا يوجد اشعارات حاليا
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+                                            <%--        <li class="dropdown-footer clearfix">
+                                        <a href="#" class="pull-left">كافة الاشعارات</a>
+                                        <a href="#" class="pull-right">
+                                            <i class="icon-settings"></i>
+                                        </a>
+                                    </li>--%>
+                                        </ul>
+
+                                    </li>
+                                    <li class="dropdown" id="user-header">
+                                        <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                            <%--<img src="../assets/global/images/avatars/user1.png" alt="user image">--%>
+                                            <asp:Image ID="imgProfile" runat="server" alt="user image" />
+                                            <span class="username">
+                                                <asp:Literal ID="ltrUsername" runat="server"></asp:Literal></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <%--      <li><a href="#">السجل الأكاديمي</a></li>--%>
+                                            <%--<li><a href="<%=Page.ResolveUrl("~/")%>Employee/MyTasks.aspx">مهامي</a></li>--%>
+                                            <li><a href="<%=Page.ResolveUrl("~/")%>Employee/MyGeneralizations.aspx">التعاميم</a></li>
+                                      <%--      <li><a href="#">طلب صيانة</a></li>
+                                            <li><a href="#">سجل طلبات الصيانة</a></li>--%>
+                                            <li><a href="<%=Page.ResolveUrl("~/")%>Employee/MyObligations.aspx">العهد</a></li>
+                                            <li>
+                                                <a href="<%=Page.ResolveUrl("~/")%>User/ChangePassword.aspx"><i class="fa fa-key"></i><span>تغيير كلمة المرور</span></a>
+                                            </li>
+                                            <li>
+                                                <asp:LinkButton ID="logout" runat="server" OnClick="logout_Click">
+                                            <i class="icon-logout"></i><span>تسجيل الخروج</span> </asp:LinkButton>
+                                                <%--<asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText="  تسجيل الخروج     "  CssClass="icon-logout"/>--%>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- BEGIN PAGE CONTENT -->
+
+
+                <!-- END TOPBAR -->
+                <nav class="navbar navbar-default secbar">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" style="font-size: 12px;" id="bs-example-navbar-collapse-1">
+
+                            <ul class="nav navbar-nav ">
+                                <li><a href="<%=Page.ResolveUrl("~/")%>Employee/Default.aspx"><i class="icon-home"></i><span>الرئيسية </span></a></li>
+
+                                <li class="nav-parent">
+                                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30" aria-expanded="false"><i class="icon-notebook"></i><span>سجل العمل الرسمي</span> <span class="fa arrow"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>EmployeeAttendence/AttendenceAdd.aspx">الحضور اليومي</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>EmployeeAttendence/AttendenceReport.aspx">التقرير اليومي</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>EmployeeAttendence/LatnessAdd.aspx">اضافة تأخر</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>EmployeeAttendence/PermissionAdd.aspx">اضافة استئذان</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>EmployeeAttendence/AbsenceDisplay.aspx">سجل الغياب</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>EmployeeAttendence/LatenessDisplay.aspx">سجل التأخر</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>EmployeeAttendence/permissionDisplay.aspx">سجل الاستئذان</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>EmployeeAttendence/PermissionClassesDisplay.aspx">سجل تأمين الحصص</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>EmployeeAttendence/EmployeeWaitingDisplay.aspx">سجل توزيع حصص الانتظار</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>EmployeeAttendence/ShiftAdd.aspx">اضافة الاشراف اليومي</a> </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-parent">
+                                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30" aria-expanded="false"><i class="fa fa-envelope"></i><span>الاتصالات الادارية</span> <span class="fa arrow"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Communication/IncomingAdd.aspx">إضافة وارد</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Communication/OutcomingAdd.aspx">إضافة صادر</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Communication/TaskAdd.aspx">إضافة مهام</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Communication/IncomingDisplay.aspx">سجل الوارد</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Communication/OutcomingDisplay.aspx">سجل الصادر</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Communication/TasksDisplay.aspx">سجل المهام</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Communication/OutcomingDelivery.aspx">سجل توديع المعاملات</a></li>
+                                        <%--<li><a href="#">سجل الاطلاع على التعاميم</a></li>--%>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-parent">
+                                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30" aria-expanded="false"><i class="fa fa-child"></i><span>شؤون الطلاب</span> <span class="fa arrow"></span></a>
+                                    <ul class="dropdown-menu">
+
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Student/StudentsReports.aspx">متابعة الطلاب</a></li>
+                                        <li>
+                                            <a href="<%=Page.ResolveUrl("~/")%>Manager/StudentRecord.aspx">بحث عن طالب</a>
+                                        </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Student/ClassList.aspx">عرض الصفوف</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>StudentAttendence/StudentAbsenceDisplay.aspx">سجل الغياب</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>StudentAttendence/StudentLatenessDisplay.aspx">سجل التأخر</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>StudentAttendence/StudentpermissionDisplay.aspx">سجل الاستئذان</a></li>
+                                     
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Student/StudentViolationsDisplay.aspx">سجل المخالفات السلوكية</a></li>
+                                        <li><a  href="<%=Page.ResolveUrl("~/")%>Student/VisitDisplay.aspx">سجل الزيارات</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>CommunicationDisplay.aspx">سجل الاتصالات</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Student/MessagesDisplay.aspx">سجل الرسائل</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>StudentAttendence/StudentAttendenceAdd.aspx">الحضور اليومي</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>StudentAttendence/StudentLatnessAdd.aspx">اضافة تأخر</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>StudentAttendence/StudentPermissionAdd.aspx">اضافة استئذان</a></li>
+                                        <li>
+                                            <a href="<%=Page.ResolveUrl("~/")%>Activity/StudentActivities.aspx">اضافة نشاطات الطلاب</a>
+                                        </li>
+                                        <li>
+                                            <a href="<%=Page.ResolveUrl("~/")%>Activity/ActivitesDisplay.aspx">سجل نشاطات الطلاب</a>
+                                        </li>
+                                        <li>
+                                            <a href="<%=Page.ResolveUrl("~/")%>Activity/GuidProgram.aspx"> اضافة البرامج الإرشادية المقدمة للطالب</a>
+                                        </li>
+                                        <li>
+                                            <a href="<%=Page.ResolveUrl("~/")%>Activity/GuidProgramDisplay.aspx"> البرامج الإرشادية المقدمة للطالب</a>
+                                        </li>
+                                        <li>
+                                            <a href="<%=Page.ResolveUrl("~/")%>Student/StudentPatients.aspx">اضافة الحالات المرضية للطلاب</a>
+                                        </li>
+                                        <li>
+                                            <a href="<%=Page.ResolveUrl("~/")%>Student/StudentPatientsDisplay.aspx">سجل الحالات المرضية للطلاب</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-parent">
+                                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30" aria-expanded="false"><i class="fa fa-book"></i><span>المكتبة </span><span class="fa arrow"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Library/BookAdd.aspx">اضافة كتاب</a> </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Library/BookDisplay.aspx">عرض الكتب</a>  </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Library/EmployeeBorrowAdd.aspx">إضافة استعارة للموظفين</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Library/StudentsBorrowAdd.aspx">اضافة إستعارة للطلاب</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Library/DailyVisitAdd.aspx">اضافة التردد اليومي</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Library/DailyVisitDisplay.aspx">سجل التردد اليومي</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Library/LibraryClassVisitRequest.aspx">سجل زيارات الفصول</a></li>
+                                        <%--<li><a href="<%=Page.ResolveUrl("~/")%>Library/ClassVisitAdd.aspx">سجل زيارات الفصول</a></li>--%>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Library/StudentsBorrowsDisplay.aspx">سجل استعاة كتب للطلاب</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Library/EmployeeBorrowDisplay.aspx">سجل استعارة كتب للموظفين</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-parent">
+                                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30" aria-expanded="false"><i class="fa fa-money"></i><span>الميزانية والمقصف </span><span class="fa arrow"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/RevenuesAdd.aspx">اضافة الايرادات</a> </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/RevenuesDisplay.aspx">سجل الايرادات</a>   </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/PurchasesAdd.aspx">اضافة المشتريات</a>  </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/PurchasesDisplay.aspx">سجل المشتريات</a>   </li>
+                                        <%--<li>محضر تسليم مبلغ   </li>--%>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/FinanceBox.aspx">لجنة ميزانية الصندوق</a>     </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/required.aspx">أمر مطالبة</a>   </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/requiredDisplay.aspx">عرض أمر المطالبة</a>  </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/HelpStudentAdd.aspx">إعانات للطلاب ذوي الاحتياجات المادية</a>     </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/HelpStudentDisplay.aspx">سجل الإعانات للطلاب ذوي الاحتياجات المادية</a>   </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/SupportStudent.aspx">فواتير الإعانات للطلاب ذوي الاحتياجات المادية</a>   </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/SupportStudentDisplay.aspx">سجل فواتير الإعانات للطلاب ذوي الاحتياجات المادية</a>  </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/ExpensesProgramsAdd.aspx">اضافة مصروفات البرامج التربوية و التعليمية التثقيفية</a>   </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/ExpensesProgramsDisplay.aspx">سجل مصروفات البرامج التربوية و التعليمية التثقيفية</a>     </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/IncentivesForEmployee.aspx">اضافة حوافز لمنسوبي المدرسة</a>      </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/IncentivesForEmployeeDisplay.aspx">سجل حوافز لمنسوبي المدرسة</a>      </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/OutstandingStudend.aspx">اضافة الطلاب المتميزين في المنهج العلمي والتربوي الصفي واللاصفي</a>        </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/OutstandingStudendDisplay.aspx">سجل الطلاب المتميزين في المنهج العلمي والتربوي الصفي واللاصفي</a>  </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/SchoolFundAdd.aspx">اضافة اجتماع لجنة الصندوق المدرسي</a>     </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/SchoolFundDisplay.aspx">سجل اجتماعات لجنة الصندوق المدرسي</a>       </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/SchoolResourceBox.aspx">اضافة موارد الصندوق المدرسي</a>    </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Finance/SchoolResourceBoxDisplay.aspx">سجل موارد الصندوق المدرسي</a>      </li>
+                                        <li></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-parent">
+                                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30" aria-expanded="false"><i class="fa fa-flask"></i><span>المعمل </span><span class="fa arrow"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/RepositoryAdd.aspx">اضافة موجودات المستودع العام</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/RepositoryDisplay.aspx">كشف بموجودات المستودع العام للمدرسة</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/ObligationAdd.aspx">اضافة العهد</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/ObligationDisplay.aspx">سجل استلام العهد</a> </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/MaterialDestroyAdd.aspx">اضافة فقد او اتلاف مواد</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/MaterialDestroyDisplay.aspx">محضر فقد أو اتلاف مواد</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/LabRecod.aspx">اضافة جرد المختبر والمواد الكيميائية</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/LabRecodDisplay.aspx">سجل جرد المختبر و المواد الكيميائية</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/CupboardRecord.aspx">اضافة عهدة خزانة المواد الكيميائية</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/CupboardRecordDisplay.aspx">بيان بعهدة خزانة المواد الكيميائية</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/MaterialsAdd.aspx">اضافة الناقص والزائد والتالف في المختبر</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/MaterialsDisplay.aspx">سجل حصر الناقص والزائد والتالف في المختبر</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/ExperimentsAdd.aspx">اضافة الخطة الفصلية للتجارب العملية</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/ExperiencesDisplay.aspx">الخطة الفصلية للتجارب العملية</a></li>
+                                        <%--<li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/ExperiencesDone.aspx">سجل تنفيذ التجارب العملية</a></li>--%>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/laboratoriesInventory.aspx">اضافة جرد المعامل</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Laboratay/laboratoriesInventoryDisplay.aspx">جرد المعامل</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-parent">
+                                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30" aria-expanded="false"><i class="fa fa-cog"></i><span>الإعدادات </span><span class="fa arrow"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>School/SchoolMap.aspx">الخريطة التنظيمية للمدرسة </a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>School/SchoolStructure.aspx">تشكيل الهيئة الإدارية لمدارس التعليم العام </a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>School/Counciles.aspx">المجالس واللجان</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Manager/EmployeeAdd.aspx">اضافة موظف</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Manager/Employees.aspx">سجل الموظفين</a> </li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Manager/StudentAdd.aspx">اضافة طالب</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>School/PrivateSettings.aspx">الاعدادات الخاصة</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>School/Jobs.aspx">المسميات الوظيفية</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>School/ConstantsAdd.aspx">ادارة الثوابت</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-parent">
+                                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30" aria-expanded="false"><i class="fa fa-file-excel-o"></i><span>استيراد </span><span class="fa arrow"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>ImportExcel/AddEmployees.aspx">اضافة الموظفين</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>ImportExcel/AddTeachers.aspx">اضافة معلمي المدرسة</a></li>
+                                        <li>
+                                            <asp:HyperLink ID="lnkStudent" runat="server">إضافة بيانات الطلاب</asp:HyperLink></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>ImportExcel/AddStudentNumber.aspx">اضافة اسماء الطلاب مرتبين بالرقم الأكاديمي</a></li>
+                                        <li>
+                                            <a href="<%=Page.ResolveUrl("~/")%>ImportExcel/AddStudentGuide.aspx">الإرشاد الأكاديمي</a>
+                                        </li>
+                                        <li>
+                                            <a href="<%=Page.ResolveUrl("~/")%>ImportExcel/AddTables.aspx">اضافة جداول الطلاب</a>
+                                        </li>
+                                        <li>
+                                            <a href="<%=Page.ResolveUrl("~/")%>ImportExcel/AddStudentGrade.aspx">كشف رصد درجات - مقررات</a>
+
+                                        </li>
+                                        <li>
+                                            <a href="<%=Page.ResolveUrl("~/")%>ImportExcel/AddStudentRates.aspx">حالة الطالب الدراسية</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <%--           <li class="nav-parent">
+                                    <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30" aria-expanded="false"><i class="fa fa-user"></i><span>الصفحة الشخصية </span><span class="fa arrow"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">السجل الأكاديمي</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Employee/MyTasks.aspx">مهامي</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Employee/MyGeneralizations.aspx">التعاميم</a></li>
+                                                   <li><a href="#">طلب صيانة</a></li>
+                                        <li><a href="#">سجل طلبات الصيانة</a></li>
+                                        <li><a href="<%=Page.ResolveUrl("~/")%>Employee/MyObligations.aspx">العهد</a></li>
+                                    </ul>
+                                </li>--%>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="page-content page-builder">
+                    <div class="container">
+                        <div class="col-md-12">
+                            <div class="col-md-3">
+                                <div class="panel" style="height: 330px;">
+                                    <div class="panel-header ">
+                                        <div class="text-center md-margin-bottom-50">
+                                            <h4>
+                                                <img alt="logo" src="<%=Page.ResolveUrl("/")%>assets/admin/page-builder/images/logo2.png" style="margin-bottom: 25px;" />
+                                            </h4>
+                                            <h4 class="headline">
+                                                <br />
+                                                <asp:Literal ID="ltrSchoolName" runat="server"></asp:Literal>
+                                            </h4>
+                                            <h5>
+                                                <asp:Literal ID="ltrSemester" runat="server"></asp:Literal>
+                                            </h5>
+                                            <h5>
+                                                <asp:Literal ID="ltrYear" runat="server"></asp:Literal>
+                                            </h5>
+                                            <h6>
+                                                <asp:Literal ID="ltrDate" runat="server"></asp:Literal>
+                                            </h6>
+                                            <br />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-9">
+                                    <div class="container-fluid">
+                                <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- END PAGE CONTENT -->
+                    </div>
+                </div>
+            </div>
+            <!-- END MAIN CONTENT -->
+        </section>
+        <%--        <div class="loader-overlay">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+        --%>
+    </form>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
+
+
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/js/application.js"></script>
+
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/jquery-cookies/jquery.cookies.min.js"></script>
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/jquery-block-ui/jquery.blockUI.min.js"></script>
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="<%=Page.ResolveUrl("~/")%>assets/admin/layout4/js/layout.js"></script>
+
+    <!-- Notifications -->
+    <asp:ContentPlaceHolder ID="scripts" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/admin/Master.master" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Admin_AdminMaster" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style>
+        .school-logo {
+            text-align: center !important;
+        }
+
+        @media (min-width: 992px) {
+            .page-content .bar {
+                width: 20%;
+            }
+
+            .page-content .main-content {
+                padding-right: 3%;
+                width: 80%;
+            }
+
+            .md-margin-bottom-50 {
+                margin-bottom: 50px;
+            }
+        }
+
+        .page-content .bar .headline {
+            /*font-weight: bold;*/
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+
+<asp:Content ID="Content2" ContentPlaceHolderID="mainContent" runat="Server">
+    <div class="row">
+        <div class="col-md-3 col-xs-12 text-center bar">
+            <div class="panel" style="padding: 10%">
+                <div class="school-logo">
+                    <img src="../assets/global/images/logo/school.png" class="img-circle" alt="" width="150" height="150" />
+                    <%--<asp:Image ID="schoolLogo" runat="server" alt="" width="120px" height="120px"/>--%>
+                </div>
+                <div class="text-center md-margin-bottom-50">
+                    <h4 class="headline">الإدارة
+                    </h4>
+                    <h5>
+                        <asp:literal id="ltrSemester" runat="server"></asp:literal>
+                    </h5>
+                    <h5>
+                        <asp:literal id="ltrYear" runat="server"></asp:literal>
+                    </h5>
+
+                    <br />
+                    <h6>
+                        <asp:literal id="ltrDate" runat="server"></asp:literal>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-xs-12 main-content">
+            <div class="container-fluid">
+                <asp:contentplaceholder id="mainContent" runat="server">
+                </asp:contentplaceholder>
+            </div>
+        </div>
+    </div>
+
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="Server">
+    <asp:contentplaceholder id="scripts" runat="server">
+    </asp:contentplaceholder>
+</asp:Content>
+
+
+

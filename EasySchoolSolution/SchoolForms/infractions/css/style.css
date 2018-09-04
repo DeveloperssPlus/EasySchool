@@ -1,0 +1,35 @@
+﻿  @charset "utf-8";
+table, th, td {	
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.table1 table,
+.table2 table{
+    width: 80%;
+   margin: 10px;
+}
+.table1  th,
+.table2  th
+{
+    padding: 7px;
+    text-align: center;
+    background: #f2f2f2;
+}
+.table1 td,
+.table2 td{
+    text-align: center;
+    padding: 13px;
+     
+}
+.table2 td{
+    padding: 7px;
+     
+}
+.roww h5{
+    padding-bottom: 12px
+}
+.table2 th
+{
+    font-weight:bold;
+}

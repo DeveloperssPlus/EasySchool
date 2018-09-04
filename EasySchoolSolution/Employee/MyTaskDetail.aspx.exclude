@@ -1,0 +1,84 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MyTaskDetail.aspx.cs" Inherits="Employee_MyTaskDetail" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="mainContent" runat="Server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <div class="col-md-12 portlets">
+        <div class="panel">
+            <div class="panel-header">
+                <a href="#"><i class="fa fa-tasks" aria-hidden="true"></i>تفاصيل المهمة</a>&nbsp;
+         
+            </div>
+            <div class="panel-content">
+                <asp:PlaceHolder ID="PlaceHolder1" runat="server" Visible="false">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="form-group">
+                                <asp:Label ID="lblType" runat="server"></asp:Label>
+                                <asp:HyperLink ID="lnkType" runat="server" Target="_blank"></asp:HyperLink>
+                            </div>
+                        </div>
+                    </div>
+                </asp:PlaceHolder>
+
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <asp:Label ID="Label3" runat="server" Text="المهمة :"></asp:Label>
+                            <asp:TextBox ID="txtTaskTitel" ReadOnly="true" runat="server" class="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <br />
+                        <asp:Label ID="lblDone" runat="server" Text="لم يتم الانتهاء من المهمة" CssClass="btn btn-danger"></asp:Label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <asp:Label ID="lblSource" runat="server" Text="تاريخ التسليم :"></asp:Label>
+                            <asp:TextBox ID="txtDate" ReadOnly="true" runat="server" class="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <asp:Label ID="Label2" runat="server" Text="شرح المهمة :"></asp:Label>
+                            <asp:TextBox ID="txtDescription" ReadOnly="true" runat="server" class="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <asp:Label ID="Label1" runat="server" Text="تقرير المهمة :"></asp:Label><asp:RequiredFieldValidator ForeColor="Red" ControlToValidate="txtReport" ID="RequiredFieldValidator1" runat="server" ErrorMessage="يجب كتابة تقرير للمهمة كي  تكون تمت" ValidationGroup="w"></asp:RequiredFieldValidator>
+                            <asp:TextBox ID="txtReport" runat="server" class="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <br />
+                        <asp:LinkButton ID="btnDone" OnClick="btnDone_Click" runat="server" Text="اضافة التقرير" CssClass="btn btn-primary" ValidationGroup="w"></asp:LinkButton>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+
+                    <div class="col-lg-4">
+                        <asp:Label ID="lblmsg" runat="server" Text="kk" Visible="false" Font-Size="20px" ForeColor="Blue"></asp:Label>
+                        <br />
+                        <asp:Button ID="btnBake" runat="server" Text="رجوع" CssClass="btn red-haze btn btn-primary" OnClick="btnBake_Click" />
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="Server">
+</asp:Content>
+

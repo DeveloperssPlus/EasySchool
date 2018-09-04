@@ -1,0 +1,113 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ClassVisitAdd.aspx.cs" Inherits="Library_ClassVisitAdd" %>
+
+<%@ Register Assembly="obout_Calendar2_Net" Namespace="OboutInc.Calendar2" TagPrefix="obout" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <link href="../assets/timepicker/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <script src="../assets/timepicker/Scripts/moment-with-locales.min.js"></script>
+    <script src="../assets/timepicker/Scripts/bootstrap-datetimepicker.js"></script>
+    <script>
+        function openModal() {
+            $('#modal').modal('show');
+        }
+    </script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="mainContent" runat="Server">
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icons-office-52"></i></button>
+                    <h4 class="modal-title"><strong>تمت العملية بنجاح</strong></h4>
+                </div>
+                <div class="modal-body">
+                    <p><strong>تمت الاضافة بنجاح</strong><br />
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-embossed" data-dismiss="modal">موافق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <div class="panel">
+        <div class="panel-header">
+            <h4><i class="icon-puzzle font-red-flamingo" aria-hidden="true"></i>&nbsp; إضافة زيارات الفصول</h4>
+        </div>
+        <div class="panel-body">
+            <div class="col-lg-6">
+
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="form-group">
+                            <asp:Label ID="Label2" runat="server" Text="اسم المعلم :"></asp:Label>
+                            <asp:DropDownList ID="DDlTeacherName" CssClass="chosen-select AutherDrop form-control form-white" runat="server"></asp:DropDownList>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="form-group">
+                            <asp:Label ID="Label5" runat="server" Text="المادة :"></asp:Label>
+                            <asp:TextBox ID="txtCoures" runat="server" class="form-control form-white"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="الرجاء إدخال المادة" ControlToValidate="txtCoures" ForeColor="Red" ValidationGroup="validation"></asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <asp:Button ID="btnAdd" runat="server" CssClass="btn red-haze btn btn-primary" Text="إضافة" OnClick="btnAdd_Click" ValidationGroup="validation" />
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="form-group">
+                            <asp:Label ID="Label4" runat="server" Text="التاريخ :"></asp:Label>
+                            <div class="col-lg-10">
+                                <asp:TextBox ID="txtDate" runat="server" CssClass="form-control form-white"></asp:TextBox>
+                            </div>
+                            <div class="col-lg-1">
+                                <obout:Calendar ID="Calendar1" CultureName="<%#MyDate.getDateCulture()%>" Columns="1"
+                                    MonthWidth="300" DateFormat="yyyy/MM/dd" DatePickerImageTooltip="التاريخ"
+                                    DatePickerImagePath="~/assets/calendar.png" DatePickerMode="true" TextBoxId="txtDate" runat="server">
+                                </obout:Calendar>
+                            </div>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="الرجاء إدخال التاريخ" ControlToValidate="txtDate" ForeColor="Red" ValidationGroup="validation"></asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="form-group">
+                            <asp:Label ID="Label1" runat="server" Text="الصف :"></asp:Label>
+                            <asp:TextBox ID="txtClass" runat="server" class="form-control form-white"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="الرجاء إدخال الصف " ControlToValidate="txtClass" ForeColor="Red" ValidationGroup="validation"></asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="Server">
+    <script src="../assets/Select/select2.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".chosen-select").select2();
+        });
+    </script>
+
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+
+</asp:Content>
+

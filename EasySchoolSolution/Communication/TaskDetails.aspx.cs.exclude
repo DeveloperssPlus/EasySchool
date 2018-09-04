@@ -1,0 +1,102 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.Security;
+
+public partial class Communication_TaskDetails : MyPermisionPage//localhost:43817/Communication/TaskDetails.aspx.csWeb.UI.Page
+{
+    OnlineSchoolEntities km = new OnlineSchoolEntities();
+
+    protected override void OnPreInit(EventArgs e)
+    {
+        MyPer = "TaskDetails";
+        base.OnPreInit(e);
+    }
+    protected void Page_Load(object sender, EventArgs e)
+    {
+      
+        FilllListUserTask();
+        Check();
+        var userId = Membership.GetUser().UserName;
+        if (!IsPostBack)
+        {
+            if (Request.QueryString["Taskid"] != null )
+            {
+                int Taskid = int.Parse(Request.QueryString["Taskid"].ToString());
+               
+                var ta = (from k in km.Tasks
+                              where k.Id== Taskid 
+                          select k).FirstOrDefault();
+
+                txtDate.Text =MyDate.getDate(ta.EndDate.ToString()) ;
+
+                txtDescription.Text = ta.Description;
+
+                txtTaskTitel.Text = ta.Title;
+
+               
+            }
+        }
+    }
+    public void FilllListUserTask()
+    {
+        int Taskid = int.Parse(Request.QueryString["Taskid"].ToString());
+        var UserTask = (from j in km.UsersTasks where j.TaskId == Taskid select new {
+            j.Report,
+            j.TaskId,
+            j.IsDone,
+            EpId= (from d in km.Employees where d.IdentityNumber == j.UserId select d.IdentityNumber).FirstOrDefault(),
+            EmpName =(from d in km.Employees where d.IdentityNumber==j.UserId select d.Name).FirstOrDefault()
+        } ).ToList();
+       
+
+        LstEmpTask.DataSource = UserTask;
+        LstEmpTask.DataBind();
+    }
+    public void Check()
+    {
+        foreach (ListViewItem item in LstEmpTask.Items)
+        {
+            int taskId = int.Parse(((HiddenField)item.FindControl("taskId")).Value);
+            string EmpId = (((HiddenField)item.FindControl("EmpId")).Value).ToString();
+            Label lblcheck = (Label)item.FindControl("lblcheck");
+            var IsDone = (from j in km.UsersTasks where j.UserId == EmpId && j.TaskId == taskId select j).FirstOrDefault();
+            if (IsDone.IsDone == true)
+            {
+                lblcheck.CssClass = "fa fa-check";
+                lblcheck.Style["visibility"] = "font-size:25px;color:green";
+            }
+            else
+            {
+                lblcheck.CssClass = "fa fa-close";
+                lblcheck.Style["visibility"] = "font-size:25px;color:red";
+            }
+        }
+    }
+    public void isDone()
+    {
+        //int Taskid = int.Parse(Request.QueryString["Taskid"].ToString());
+        //var userId = Membership.GetUser().UserName;
+        //var IsDone = (from j in km.UsersTasks where j.UserId == userId && j.TaskId == Taskid select j).FirstOrDefault();
+        //if(IsDone.IsDone ==true)
+        //{
+        //    lblDone.Text = "تم الانتهاءمن المهمة";
+        //    lblDone.CssClass = "btn btn-success";
+        //    btnDone.Visible = false;
+        //}
+        //else
+        //{
+        //    lblDone.Text = "لم يتم الانتهاء من المهمة";
+        //    lblDone.CssClass = "btn btn-danger";
+        //    btnDone.Visible = true;
+        //}
+    }
+
+    protected void btnBack_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("TasksDisplay.aspx");
+    }
+}

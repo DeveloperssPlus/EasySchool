@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.Security;
+
+public partial class Employee_MyTasks : MyPermisionPage
+{
+    OnlineSchoolEntities km = new OnlineSchoolEntities();
+    protected override void OnPreInit(EventArgs e)
+    {
+        MyPer = "MyTasks";
+        base.OnPreInit(e);
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            LstMyTask.DataBind();
+            check();
+        }
+    }
+
+  
+   public void check()
+    {
+        var userId = Membership.GetUser().UserName;
+        foreach (ListViewItem item in LstMyTask.Items)
+        {
+            int taskid =int.Parse (((HiddenField)item.FindControl("taskId")).Value);
+            Label lblcheck=(Label)item.FindControl("lblcheck");
+            var IsDone = (from j in km.UsersTasks where j.UserId == userId && j.TaskId == taskid select j).FirstOrDefault();
+            if (IsDone.IsDone == true)
+            {
+                lblcheck.CssClass = "fa fa-check";
+                lblcheck.Style["visibility"] = "font-size:25px;color:green";
+            }
+            else
+            {
+                lblcheck.CssClass = "fa fa-close";
+                lblcheck.Style["visibility"] = "font-size:25px;color:red";
+            }
+        }
+    }
+
+
+    protected void LstMyTask_DataBinding(object sender, EventArgs e)
+    {
+        var userId = Membership.GetUser().UserName;
+       
+        var lstTask = (from k in km.UsersTasks
+                           where k.UserId== userId
+                       select new
+                       {
+                           TitleTask = (from x in km.Tasks where x.Id == k.TaskId select x.Title).FirstOrDefault(),
+                           DescriptionTask = (from x in km.Tasks where x.Id == k.TaskId select x.Description).FirstOrDefault(),
+                           EndDate = (from x in km.Tasks where x.Id == k.TaskId select x.EndDate).FirstOrDefault(),
+                           k.UserId,
+                           taskId= (from x in km.Tasks where x.Id == k.TaskId select x.Id).FirstOrDefault()
+                       }).ToList();
+        LstMyTask.DataSource = lstTask;
+    }
+}

@@ -1,0 +1,110 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="TaskDetails.aspx.cs" Inherits="Communication_TaskDetails" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="mainContent" runat="Server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <div class="col-md-12">
+        <div class="panel">
+            <div class="panel-header">
+               <h3><i class="fa fa-tasks" aria-hidden="true"></i>تفاصيل المهمة&nbsp;</h3>
+            </div>
+            <div class="panel-content">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <asp:Label ID="Label3" runat="server" Text="المهمة :"></asp:Label>
+                            <asp:TextBox ID="txtTaskTitel" ReadOnly="true" runat="server" class="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <asp:Label ID="lblSource" runat="server" Text="تاريخ التسليم :"></asp:Label>
+                            <asp:TextBox ID="txtDate" ReadOnly="true" runat="server" class="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="form-group">
+                            <asp:Label ID="Label2" runat="server" Text="شرح المهمة :"></asp:Label>
+                            <asp:TextBox ID="txtDescription" ReadOnly="true" runat="server" class="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                </div>
+
+              
+                <br />
+              
+                        <div class="panel">
+            <div class="panel-header">
+                  <div class="row">
+                    <div class="col-lg-9">                      
+                         <h3><i class="fa fa-tasks"></i><strong>قائمة الموظفين</strong> </h3>                      
+                    </div>
+                      <div class="col-lg-3">
+                          <br />
+                          <asp:Button ID="btnBack" runat="server" Text="رجوع" CssClass="btn red-haze btn btn-primary" OnClick="btnBack_Click" />
+                      </div>
+                </div>
+                
+            </div>
+            <div class="panel-content">
+                <asp:ListView ID="LstEmpTask"  runat="server">
+                    <LayoutTemplate>
+                        <table class="table table-hover table-dynamic">
+                            <thead>
+                                <tr>
+                                 
+                                    <th>
+                                        <div class="m-b-10">الموظف</div>
+                                    </th>
+                                    <th>
+                                        <div class="m-b-10">انتهاء المهمة</div>
+                                    </th>
+                                    <th>
+                                        <div class="m-b-10">التقرير</div>
+                                    </th>
+
+                                </tr>
+                            </thead>
+
+                            <tr id="itemPlaceholder" runat="server"></tr>
+                        </table>
+                    </LayoutTemplate>
+
+                    <ItemTemplate>
+                        <tr>
+                            <td>
+                                <asp:HiddenField ID="taskId" runat="server" Value='<%# Eval("TaskId") %>' />
+                                <asp:HiddenField ID="EmpId" runat="server" Value='<%# Eval("EpId") %>' />
+                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("EmpName") %>'></asp:Label></td>
+                           
+                            <td>
+                                <asp:Label ID="lblcheck" CssClass="fa fa-check" runat="server" Style="font-size: 25px; color: green"></asp:Label>
+
+                            </td>
+                            <td>
+                                <asp:Label ID="lblDescription" runat="server" Text='<%# Eval("Report") %>'></asp:Label></td>
+                           
+                        </tr>
+                    </ItemTemplate>
+                    <EmptyDataTemplate>
+                        <h2>لايوجد موظفين</h2>
+                    </EmptyDataTemplate>
+
+
+
+                </asp:ListView>
+
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="scripts" runat="Server">
+</asp:Content>
+

@@ -1,0 +1,86 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class Library_ClassVisitAdd : MyPermisionPage
+{
+    OnlineSchoolEntities km = new OnlineSchoolEntities();
+    SchoolInformation info = new SchoolInformation();
+    protected override void OnPreInit(EventArgs e)
+    {
+        MyPer = "ClassVisitAdd";
+        base.OnPreInit(e);
+    }
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        var schoolid = new SchoolInformation().getId();
+        if (!IsPostBack)
+        {
+            Calendar1.DataBind();
+            var jobid = (from k in km.Jobs where k.Name == "معلم" select k.Id).FirstOrDefault();
+
+            var teacher = (from teach in km.Employees
+                           where
+                           teach.SchoolId == schoolid && teach.JobId == jobid
+                           select teach).ToList();
+
+            DDlTeacherName.DataValueField = "IdentityNumber";
+            DDlTeacherName.DataTextField = "Name";
+            DDlTeacherName.DataSource = teacher;
+            DDlTeacherName.DataBind();
+        }
+    }
+    protected void clear()
+    {
+        txtClass.Text = "";
+        txtCoures.Text = "";
+        txtDate.Text = "";
+       
+        DDlTeacherName.SelectedIndex = -1;
+
+
+    }
+
+    protected void btnAdd_Click(object sender, EventArgs e)
+    {
+        int SchoolID = info.getId();
+       
+            LibraryClassVisit visit = new LibraryClassVisit();
+
+    
+
+            if (Calendar1.CultureName == "ar-SA")
+            {
+            visit.Date = MyDate.convertHijriToGregorian(txtDate.Text);
+            }
+            else
+            {
+            visit.Date = DateTime.ParseExact(txtDate.Text,"yyyy/MM/dd",CultureInfo.CreateSpecificCulture("ar-EG"));
+            }
+
+        //    var subject=
+
+        //if (!String.IsNullOrEmpty(txtClass.Text))
+        //{
+        //    visit.Class = txtClass.Text;
+        //}
+        //if (!String.IsNullOrEmpty(txtCoures.Text))
+        //    visit.Course = txtCoures.Text;
+
+
+        visit.TeacherId = DDlTeacherName.SelectedValue;
+
+        visit.SchoolId = SchoolID;
+        visit.SemesterId= MyDate.getCurrentSemesterId();
+
+        km.LibraryClassVisits.Add(visit);
+        km.SaveChanges();
+        clear();
+                ClientScript.RegisterStartupScript(this.GetType(), "openModal", "<script> openModal(); </script>", false);
+
+    }
+}

@@ -1,0 +1,2351 @@
+﻿@charset "utf-8";
+
+body {
+}
+
+.title {
+    height: 80px;
+    background-color: #467553;
+    color: white;
+}
+
+
+
+    .title h3 {
+        padding-right: 40px;
+    }
+
+.content .sub-title h5 {
+    padding: 10px 50px;
+    text-align: right;
+    color: #467553;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+
+
+.content .table-name h3 {
+    color: #467553;
+}
+
+
+.content .nam h4 {
+    padding-right: 30px;
+}
+
+.content .fo7 {
+    padding-right: 70px;
+}
+
+
+.table3 {
+    padding-right: 18px;
+}
+
+    .table8 th, .table2 th, .table21 th, .table3 th, .table7 th, .table9-1 th, .table13 th, .table18 th, .table18 th, .table18-3 th, .table22 th, .table22-2 th, .table22-3 th, .table22-4 th, .table32 th, .table23-1 th, .table30 th, .table108 th, .table16 th, .table20 th, .table20-1 th, .table20-2 th, .table20-3 th, .table14 th {
+        background-color: #658C6F;
+        color: white;
+        /* [disabled]text-align:center; */
+    }
+
+.table2 table tbody h5 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+.table21 table tbody h5 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+/*h5{
+			margin-top:2px;
+			margin-bottom:2px;
+		}*/
+
+
+.table2 table tbody th {
+    padding: 2px;
+}
+
+
+
+.table21 table tbody th {
+    padding: 2px;
+}
+
+.table2 table tbody td {
+    padding: 7px;
+}
+
+
+
+.table21 table tbody td {
+    padding: 7px;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+.table2 table tbody .a th:nth-child(even) {
+    background-color: #D2DED2;
+}
+
+.table2 table tbody .aa th:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.table24-1 table tbody .a th:nth-child(even) {
+    background-color: #D2DED2;
+}
+
+.table24-1 table tbody .aa th:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.table21 table tbody .a th:nth-child(even) {
+    background-color: #D2DED2;
+}
+
+.table21 table tbody .aa th:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+
+.foot {
+    padding-right: 70px;
+}
+
+.ff {
+    padding-right: 50px;
+}
+
+.tex {
+    padding-right: 100px;
+}
+
+
+.table18-3 table tbody td {
+    padding: 7px;
+}
+
+.table20-3 table tbody td {
+    padding: 7px;
+}
+
+
+
+
+
+
+
+.table23-1 table h5 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.table23-1 table th {
+    padding: 1px;
+}
+
+.table23-1 table td {
+    padding: 7px;
+}
+
+
+
+.table23-1 table tr:nth-child(even) {
+    background-color: #D2DED2;
+}
+
+.table23-1 table tr:nth-child(odd) {
+    background-color: #EBF0EA;
+}
+
+
+
+
+.table22-3 table tr:nth-child(even) {
+    background-color: #D2DED2;
+}
+
+.table22-3 table tr:nth-child(odd) {
+    background-color: #EBF0EA;
+}
+
+
+.table7 table tr:nth-child(even) {
+    background-color: #D2DED2;
+}
+
+.table7 table tr:nth-child(odd) {
+    background-color: #EBF0EA;
+}
+
+.table9-1 table tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table9-1 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.table13 table tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table13 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.table14 table tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table14 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+
+
+
+.table16 table tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table16 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.table16 table td {
+    padding: 7px;
+}
+
+.table16 table h5 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.table16 table th {
+    padding: 6px;
+}
+
+.table108 table tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table108 table tr:nth-child(even) {
+    background-color: white;
+}
+
+
+.table108 table td {
+    padding: 7px;
+}
+
+.table108 table h5 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.table108 table th {
+    padding: 6px;
+}
+
+.table30 table th {
+    padding: 6px;
+}
+
+.table30 table tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table30 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+
+
+
+
+.table32 table tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table32 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+
+.table32 table td {
+    padding: 7px;
+}
+
+
+
+.table32 table th {
+    padding: 6px;
+}
+
+
+
+
+.table3 table, .table4-1 table, .table4-2 table, .table4-3 table, .table4-4 table, .table17 table, .table19 table {
+    width: 80%;
+    margin: 10px;
+}
+
+table, th, td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+.table3 table th, .table4-1 table th, .table4-2 table th, .table4-3 table th, .table4-4 table th, .table19 table th {
+    font-size: 15px;
+    text-align: center;
+}
+
+.table3 table,
+.table3 table tbody td,
+.table3 table thead th {
+    padding: 7px;
+}
+
+.table19 table tbody td {
+    padding: 7px;
+}
+
+.table4-1 table th,
+.table4-2 table th,
+.table4-3 table th,
+.table4-4 table th,
+.table4-4 table td,
+.table17 table td,
+.table19 table th {
+    padding: 3px;
+}
+
+.table3 table thead, .table4-4 table thead, .table17 table thead, .table19 table th {
+    background: #658C6F;
+    color: #fff;
+}
+
+    .table3 table thead th:first-child {
+        width: 40px;
+    }
+
+.table3 table tbody tr:nth-child(even),
+.table17 table tbody tr:nth-child(even) {
+    background-color: #D2DED2;
+}
+
+.table3 table tbody tr:nth-child(odd),
+.table17 table tbody tr:nth-child(odd),
+.table19 table tbody tr {
+    background-color: #EBF0EA;
+}
+
+.table4-1 table th:nth-child(even) {
+    background-color: #EBF0EA;
+    color: #fff;
+}
+
+.table4-1 table th:nth-child(odd) {
+    background-color: #658C6F;
+    color: #fff;
+    width: 20%;
+}
+
+.table4-2 table th:first-child {
+    background-color: #658C6F;
+    color: #fff;
+    width: 20%;
+}
+
+.table4-2 table th, .table4-3 table th {
+    background-color: #EBF0EA;
+    color: #fff;
+}
+
+    .table4-3 table th:first-child {
+        background-color: #658C6F;
+        color: #fff;
+        width: 30%;
+    }
+
+.table4-4 table thead th tr {
+    width: 40%;
+}
+
+.content .sub-par {
+    text-align: right;
+    padding-right: 65px;
+}
+
+.content .text {
+    margin: 10px;
+    padding-right: 60px;
+    text-align: justify;
+}
+
+.table2 table tbody h5,
+.table21 table tbody h5 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+
+
+.table2 table tbody th,
+,
+.table21 table tbody th {
+    padding: 2px;
+}
+
+.table2 table tbody td,
+.table21 table tbody td {
+    padding: 7px;
+}
+
+
+.content .end {
+    padding: 10px 65px;
+    text-align: right;
+}
+
+
+.table30 table td {
+    padding: 7px;
+}
+
+.table30 table th {
+    padding: 6px;
+}
+
+
+.table22 table th, .table22-2 table th, .table22-3 table th {
+    padding: 2px;
+}
+
+
+.table22-2 table td, .table22-3 table td {
+    padding: 7px;
+}
+
+
+
+
+.table22-4 table th {
+    padding: 1px;
+}
+
+.table22-4 table td {
+    padding: 2px;
+}
+
+.form31 h4 {
+    color: #467553;
+    font-weight: bold;
+}
+
+.table43-1 table, .table43-2 table, .table46 table {
+    width: 80%;
+    margin: 10px;
+}
+
+table, th, td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+.table43-1 table th, .table43-2 table th {
+    font-size: 15px;
+}
+
+.table46 table th {
+    font-size: 20px;
+}
+
+.table46 table thead td {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.table43-1 table,
+.table43-1 table tbody td,
+.table43-1 table thead th {
+    padding: 4px;
+}
+
+.table43-2 table,
+.table43-2 table tbody td,
+.table43-2 table thead th,
+.table46 table,
+.table46 table td,
+.table46 table th {
+    padding: 7px;
+}
+
+    .table43-1 table thead, .table43-2 table thead, .table46 table thead {
+        background: #658C6F;
+        color: #fff;
+    }
+
+    .table43-1 table tbody tr:nth-child(even), .table43-2 table tbody tr:nth-child(even), .table46 table tbody tr:nth-child(even) {
+        background-color: #D2DED2;
+    }
+
+    .table43-1 table tbody tr:nth-child(odd), .table43-2 table tbody tr:nth-child(odd), .table46 table tbody tr:nth-child(odd) {
+        background-color: #EBF0EA;
+    }
+
+.table43-1 table thead th:first-child {
+    width: 40px;
+}
+
+.item h5 {
+    color: #5A3F60;
+    text-align: right;
+    margin-right: 70px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.black-item h5 {
+    text-align: right;
+    margin-right: 70px;
+}
+
+.table48 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table48 table th {
+        font-size: 20px;
+    }
+
+    .table48 table thead td {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .table48 table,
+    .table48 table td,
+    .table48 table th {
+        padding: 7px;
+        text-align: center;
+    }
+
+        .table48 table th {
+            background: #658C6F;
+            color: #fff;
+        }
+
+        .table48 table tbody tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table48 table tbody tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+.table49 table {
+    width: 60%;
+    margin: 10px;
+}
+
+    .table49 table th {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .table49 table thead td {
+        font-size: 10px;
+    }
+
+    .table49 table,
+    .table49 table td,
+    .table49 table th {
+        padding: 7px;
+        text-align: center
+    }
+
+        .table49 table thead {
+            background: #658C6F;
+            color: #fff;
+        }
+
+        .table49 table tbody tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table49 table tbody tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+.table6 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table6 table th {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .table6 table thead td {
+        font-size: 10px;
+    }
+
+    .table6 table,
+    .table6 table td,
+    .table6 table th {
+        padding: 7px;
+        text-align: center
+    }
+
+        .table6 table thead {
+            background: #658C6F;
+            color: #fff;
+        }
+
+        .table6 table tbody tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table6 table tbody tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+        .table6 table tbody td:first-child {
+            background: #658C6F;
+            color: #fff;
+        }
+
+.table10 table, .table11 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table10 table th, .table11 table th {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .table10 table thead td {
+        font-size: 10px;
+    }
+
+    .table10 table,
+    .table10 table th,
+    .table11 table,
+    .table11 table th {
+        padding: 7px;
+        text-align: center
+    }
+
+        .table10 table td {
+            padding: 1px;
+        }
+
+        .table10 table thead {
+            background: #658C6F;
+            color: #fff;
+        }
+
+        .table11 table tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table11 table tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+        .table11 table td {
+            padding-top: 10px;
+            padding-bottom: 40px;
+            padding-right: 10px;
+            text-align: right
+        }
+
+            .table11 table td h5 {
+                text-align: right;
+            }
+
+.box {
+    border: 1px solid #000;
+    width: 80%;
+    background: #D2DED2;
+    padding: 10px;
+}
+
+.table5 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table5 table th {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .table5 table td {
+        font-size: 10px;
+    }
+
+    .table5 table th {
+        background: #658C6F;
+        color: #fff;
+    }
+
+    .table5 table,
+    .table5 table td,
+    .table5 table th {
+        padding: 7px;
+        text-align: center
+    }
+
+        .table5 table tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table5 table tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+.table5-1 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table5-1 table th {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .table5-1 table td {
+        font-size: 10px;
+    }
+
+    .table5-1 table th {
+        background: #658C6F;
+        color: #fff;
+    }
+
+    .table5-1 table,
+    .table5-1 table td,
+    .table5-1 table th {
+        padding: 3px;
+        text-align: center
+    }
+
+        .table5-1 table tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table5-1 table tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+}
+@charset "utf-8";
+
+body {
+}
+
+.title {
+    height: 80px;
+    background-color: #467553;
+    color: white;
+}
+
+
+
+    .title h3 {
+        padding-right: 40px;
+    }
+
+.content .sub-title h5 {
+    padding: 10px 50px;
+    text-align: right;
+    color: #467553;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+
+
+.content .table-name h3 {
+    color: #467553;
+}
+
+
+.content .nam h4 {
+    padding-right: 30px;
+}
+
+.content .fo7 {
+    padding-right: 70px;
+}
+
+
+.table3 {
+    padding-right: 18px;
+}
+
+    .table8 th, .table2 th, .table24-1 th, .table21 th, .table3 th, .table7 th, .table9-1 th, .table13 th, .table18 th, .table18 th, .table18-3 th, .table22 th, .table22-2 th, .table22-3 th, .table22-4 th, .table32 th, .table23-1 th, .table30 th, .table108 th, .table16 th, .table20 th, .table20-1 th, .table20-2 th, .table20-3 th, .table14 th {
+        background-color: #658C6F;
+        color: white;
+        /* [disabled]text-align:center; */
+    }
+
+.table2 table tbody h5 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+.table21 table tbody h5 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+/*h5{
+			margin-top:2px;
+			margin-bottom:2px;
+		}*/
+
+
+.table2 table tbody th {
+    padding: 2px;
+}
+
+
+.table21 table tbody th {
+    padding: 2px;
+}
+
+.table2 table tbody td {
+    padding: 7px;
+}
+
+
+
+.table21 table tbody td {
+    padding: 7px;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.table2 table tbody .a th:nth-child(even) {
+    background-color: #D2DED2;
+}
+
+.table2 table tbody .aa th:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+
+
+.table21 table tbody .a th:nth-child(even) {
+    background-color: #D2DED2;
+}
+
+.table21 table tbody .aa th:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+
+.foot {
+    padding-right: 70px;
+}
+
+.ff {
+    padding-right: 50px;
+}
+
+.tex {
+    padding-right: 100px;
+}
+
+
+.table18-3 table tbody td {
+    padding: 7px;
+}
+
+.table20-3 table tbody td {
+    padding: 7px;
+}
+
+
+
+
+
+
+
+.table23-1 table h5 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.table23-1 table th {
+    padding: 1px;
+}
+
+.table23-1 table td {
+    padding: 7px;
+}
+
+
+
+.table23-1 table tr:nth-child(even) {
+    background-color: #D2DED2;
+}
+
+.table23-1 table tr:nth-child(odd) {
+    background-color: #EBF0EA;
+}
+
+
+
+
+.table22-3 table tr:nth-child(even) {
+    background-color: #D2DED2;
+}
+
+.table22-3 table tr:nth-child(odd) {
+    background-color: #EBF0EA;
+}
+
+
+.table7 table tr:nth-child(even) {
+    background-color: #D2DED2;
+}
+
+.table7 table tr:nth-child(odd) {
+    background-color: #EBF0EA;
+}
+
+.table9-1 table tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table9-1 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.table13 table tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table13 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.table14 table tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table14 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+
+
+
+.table16 table tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table16 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.table16 table td {
+    padding: 7px;
+}
+
+.table16 table h5 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.table16 table th {
+    padding: 6px;
+}
+
+.table108 table tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table108 table tr:nth-child(even) {
+    background-color: white;
+}
+
+
+.table108 table td {
+    padding: 7px;
+}
+
+.table108 table h5 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.table108 table th {
+    padding: 6px;
+}
+
+.table30 table th {
+    padding: 6px;
+}
+
+.table30 table tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table30 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+
+
+
+.table32 table tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table32 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+
+.table32 table td {
+    padding: 7px;
+}
+
+
+
+.table32 table th {
+    padding: 6px;
+}
+
+
+
+
+
+
+
+.table3 table, .table4-1 table, .table4-2 table, .table4-3 table, .table4-4 table, .table17 table, .table19 table {
+    width: 80%;
+    margin: 10px;
+}
+
+table, th, td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+.table3 table th, .table4-1 table th, .table4-2 table th, .table4-3 table th, .table4-4 table th, .table19 table th {
+    font-size: 15px;
+    text-align: center;
+}
+
+.table3 table,
+.table3 table tbody td,
+.table3 table thead th {
+    padding: 7px;
+}
+
+.table19 table tbody td {
+    padding: 7px;
+}
+
+.table4-1 table th,
+.table4-2 table th,
+.table4-3 table th,
+.table4-4 table th,
+.table4-4 table td,
+.table17 table td,
+.table19 table th {
+    padding: 3px;
+}
+
+.table3 table thead, .table4-4 table thead, .table17 table thead, .table19 table th {
+    background: #658C6F;
+    color: #fff;
+}
+
+    .table3 table thead th:first-child {
+        width: 40px;
+    }
+
+.table3 table tbody tr:nth-child(even),
+.table17 table tbody tr:nth-child(even) {
+    background-color: #D2DED2;
+}
+
+.table3 table tbody tr:nth-child(odd),
+.table17 table tbody tr:nth-child(odd),
+.table19 table tbody tr {
+    background-color: #EBF0EA;
+}
+
+.table4-1 table th:nth-child(even) {
+    background-color: #EBF0EA;
+    color: #fff;
+}
+
+.table4-1 table th:nth-child(odd) {
+    background-color: #658C6F;
+    color: #fff;
+    width: 20%;
+}
+
+.table4-2 table th:first-child {
+    background-color: #658C6F;
+    color: #fff;
+    width: 20%;
+}
+
+.table4-2 table th, .table4-3 table th {
+    background-color: #EBF0EA;
+    color: #fff;
+}
+
+    .table4-3 table th:first-child {
+        background-color: #658C6F;
+        color: #fff;
+        width: 30%;
+    }
+
+.table4-4 table thead th tr {
+    width: 40%;
+}
+
+.content .sub-par {
+    text-align: right;
+    padding-right: 65px;
+}
+
+.content .text {
+    margin: 10px;
+    padding-right: 60px;
+    text-align: justify;
+}
+
+.table2 table tbody h5,
+.table24-1 table tbody h5,
+.table21 table tbody h5 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.table2 table tbody th,
+.table24-1 table tbody th,
+.table21 table tbody th {
+    padding: 2px;
+}
+
+.table2 table tbody td,
+.table21 table tbody td {
+    padding: 7px;
+}
+
+
+
+.content .end {
+    padding: 10px 65px;
+    text-align: right;
+}
+
+
+.table30 table td {
+    padding: 7px;
+}
+
+.table30 table th {
+    padding: 6px;
+}
+
+
+.table22 table th, .table22-2 table th, .table22-3 table th {
+    padding: 2px;
+}
+
+
+.table22-2 table td, .table22-3 table td {
+    padding: 7px;
+}
+
+
+
+
+.table22-4 table th {
+    padding: 1px;
+}
+
+.table22-4 table td {
+    padding: 2px;
+}
+
+.form31 h4 {
+    color: #467553;
+    font-weight: bold;
+}
+
+.table43-1 table, .table43-2 table, .table46 table {
+    width: 80%;
+    margin: 10px;
+}
+
+table, th, td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+.table43-1 table th, .table43-2 table th {
+    font-size: 15px;
+}
+
+.table46 table th {
+    font-size: 20px;
+}
+
+.table46 table thead td {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.table43-1 table,
+.table43-1 table tbody td,
+.table43-1 table thead th {
+    padding: 4px;
+}
+
+.table43-2 table,
+.table43-2 table tbody td,
+.table43-2 table thead th,
+.table46 table,
+.table46 table td,
+.table46 table th {
+    padding: 4px;
+}
+
+    .table43-1 table thead, .table43-2 table thead, .table46 table thead {
+        background: #658C6F;
+        color: #fff;
+    }
+
+    .table43-1 table tbody tr:nth-child(even), .table43-2 table tbody tr:nth-child(even), .table46 table tbody tr:nth-child(even) {
+        background-color: #D2DED2;
+    }
+
+    .table43-1 table tbody tr:nth-child(odd), .table43-2 table tbody tr:nth-child(odd), .table46 table tbody tr:nth-child(odd) {
+        background-color: #EBF0EA;
+    }
+
+.table43-1 table thead th:first-child {
+    width: 40px;
+}
+
+.item h5 {
+    color: #5A3F60;
+    text-align: right;
+    margin-right: 70px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.black-item h5 {
+    text-align: right;
+    margin-right: 70px;
+}
+
+.table48 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table48 table th {
+        font-size: 20px;
+    }
+
+    .table48 table thead td {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .table48 table,
+    .table48 table td,
+    .table48 table th {
+        padding: 7px;
+        text-align: center;
+    }
+
+        .table48 table th {
+            background: #658C6F;
+            color: #fff;
+        }
+
+        .table48 table tbody tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table48 table tbody tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+.table49 table {
+    width: 60%;
+    margin: 10px;
+}
+
+    .table49 table th {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .table49 table thead td {
+        font-size: 10px;
+    }
+
+    .table49 table,
+    .table49 table td,
+    .table49 table th {
+        padding: 10px;
+        text-align: center
+    }
+
+        .table49 table thead {
+            background: #658C6F;
+            color: #fff;
+        }
+
+        .table49 table tbody tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table49 table tbody tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+.table6 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table6 table th {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .table6 table thead td {
+        font-size: 10px;
+    }
+
+    .table6 table,
+    .table6 table td,
+    .table6 table th {
+        padding: 7px;
+        text-align: center
+    }
+
+        .table6 table thead {
+            background: #658C6F;
+            color: #fff;
+        }
+
+        .table6 table tbody tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table6 table tbody tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+        .table6 table tbody td:first-child {
+            background: #658C6F;
+            color: #fff;
+        }
+
+.table10 table, .table11 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table10 table th, .table11 table th {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .table10 table thead td {
+        font-size: 10px;
+    }
+
+    .table10 table,
+    .table10 table th,
+    .table11 table,
+    .table11 table th {
+        padding: 7px;
+        text-align: center
+    }
+
+        .table10 table td {
+            padding: 1px;
+        }
+
+        .table10 table thead {
+            background: #658C6F;
+            color: #fff;
+        }
+
+        .table11 table tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table11 table tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+        .table11 table td {
+            padding-top: 10px;
+            padding-bottom: 40px;
+            padding-right: 10px;
+            text-align: right
+        }
+
+            .table11 table td h5 {
+                text-align: right;
+            }
+
+.box {
+    border: 1px solid #000;
+    width: 80%;
+    background: #D2DED2;
+    padding: 10px;
+}
+
+.table5 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table5 table th {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .table5 table td {
+        font-size: 10px;
+    }
+
+    .table5 table th {
+        background: #658C6F;
+        color: #fff;
+    }
+
+    .table5 table,
+    .table5 table td,
+    .table5 table th {
+        padding: 7px;
+        text-align: center
+    }
+
+        .table5 table tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table5 table tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+.table5-1 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table5-1 table th {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .table5-1 table td {
+        font-size: 10px;
+    }
+
+    .table5-1 table th {
+        background: #658C6F;
+        color: #fff;
+    }
+
+    .table5-1 table,
+    .table5-1 table td,
+    .table5-1 table th {
+        padding: 3px;
+        text-align: center
+    }
+
+        .table5-1 table tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table5-1 table tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+.table25 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table25 table th {
+        font-size: 15px;
+        font-weight: 100;
+        text-align: center;
+    }
+
+    .table25 table,
+    .table25 table tbody td,
+    .table25 table thead th {
+        padding: 3px;
+    }
+
+        .table25 table thead {
+            background: #658C6F;
+            color: #fff;
+        }
+
+        .table25 table tbody tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table25 table tbody tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+.table26 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table26 table th {
+        font-size: 15px;
+        font-weight: 100;
+    }
+
+    .table26 table,
+    .table26 table tbody td,
+    .table26 table thead th {
+        padding: 3px;
+        text-align: center;
+    }
+
+        .table26 table thead {
+            background: #658C6F;
+            color: #fff;
+        }
+
+/*********************24*******************/
+.table24-1 table tbody td,
+.table24-2 table tbody td,
+.table24-3 table tbody td,
+.table24-4 table tbody td,
+.table24-5 table tbody td {
+    padding: 7px;
+}
+
+.table24-3 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.table24-4 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.table24-5 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.table24-2 table tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table24-2 table tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.table24-1 table tbody .a th:nth-child(even) {
+    background-color: #D2DED2;
+}
+
+.table24-1 table tbody .aa th:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.table24-1 table tbody td {
+    padding: 7px;
+    background: #d2ded2;
+}
+
+.table24-1 table tbody td,
+.table24-2 table tbody td,
+.table24-3 table tbody td,
+.table24-4 table tbody td,
+.table24-5 table tbody td {
+    padding: 7px;
+}
+
+.table24-1 table tbody th,
+.table24-2 table tbody th,
+.table24-3 table tbody th,
+.table24-4 table tbody th,
+.table24-5 table tbody th {
+    padding: 2px;
+}
+
+.table24-1 table tbody h5,
+.table24-2 table tbody h5,
+.table24-3 table tbody h5,
+.table24-4 table tbody h5,
+.table24-5 table tbody h5 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-right: 5px;
+}
+
+.table24-1 table tbody td,
+.table24-2 table tbody td,
+.table24-3 table tbody td,
+.table24-4 table tbody td,
+.table24-5 table tbody td {
+    padding: 7px;
+}
+
+.table24-1 table tbody th {
+    padding: 2px;
+}
+
+.table24-1 #d {
+    background-color: #D2DED2;
+}
+
+.table24-2 #aa {
+    background-color: #658c6f;
+    color: #FFF;
+}
+
+.table24-3 #a {
+    background-color: #658c6f;
+    color: #FFF;
+}
+
+.table24-4 #bb {
+    background-color: #658c6f;
+    color: #FFF;
+}
+
+.table24-5 #b {
+    background-color: #658c6f;
+    color: #FFF;
+}
+
+.table24-3 #C,
+.table24-4 #C,
+.table24-5 #C {
+    background-color: #D2DED2;
+}
+
+.table24-4 #cc,
+.table24-5 #cc {
+    background-color: #658c6f;
+    color: #FFF;
+}
+
+.table24-3 #ccc {
+    background-color: #8fac95;
+    color: #FFF;
+}
+
+.table24-1 #x th,
+.table24-2 #aa th,
+.table24-3 #a th,
+.table24-4 #bb th,
+.table24-5 #b th {
+    text-align: center;
+}
+/***************55*********/
+
+.table55 table tbody h5 {
+    margin-top: 5px;
+    color: black;
+    text-align: center;
+    font-size: 17px;
+}
+
+.table55 table tbody h6 {
+    color: black;
+    text-align: center;
+    margin-top: -15px;
+}
+
+.table55 table tbody td:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.table55 table tbody td:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+/***************56*********/
+.table56-1 th,
+.table56-2 th {
+    background-color: #658C6F;
+    color: white;
+    text-align: center;
+    padding: 2px;
+}
+
+.table56-2 .x {
+    background-color: #D2DED2;
+    color: black;
+}
+
+.table56-2 .xx {
+    background-color: #658C6F;
+    color: #FFF;
+    text-align: center;
+}
+
+.table56-1 table tbody td {
+    padding: 7px;
+}
+
+.table56-2 table tbody td {
+    padding: 5px;
+}
+
+.table56-2 table tbody h5 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 5px;
+}
+
+.table56-1 table tbody td:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.table56-1 table tbody td:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table56-2 table tbody tr:nth-child(even) {
+    background-color: #D2DED2;
+}
+
+.table56-2 table tbody tr:nth-child(odd) {
+    background-color: #EBF0EA;
+}
+
+.table56-2 table thead th:first-child {
+    width: 40px;
+}
+/*****************50***********************/
+.container .form50 h5 {
+    font-size: 20px;
+}
+
+.table50 table,
+.table50 table tbody td,
+.table50 table thead th,
+{
+    padding: 7px;
+}
+
+    .table50 table thead {
+        background: #658C6F;
+        color: #fff;
+    }
+
+.table50-1 td {
+    padding-bottom: 40px;
+    padding-top: 10px;
+    padding-right: 15px;
+}
+
+.table50-1 table tbody tr:nth-child(odd) {
+    background-color: #D2DED2;
+}
+
+.table50-1 table tbody tr:nth-child(even) {
+    background-color: #EBF0EA;
+}
+
+.container .form50 {
+    padding: 20px 50px;
+}
+
+
+
+.table50-2 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table50-2 table th {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .table50-2 table thead {
+        background-color: #658c6f;
+        color: #FFF;
+    }
+
+        .table50-2 table thead th tr {
+            width: 40%;
+        }
+
+    .table50-2 table th,
+    .table50-2 table td {
+        padding: 3px
+    }
+
+    .table50-2 table #x {
+        padding: 12px
+    }
+
+    .table50-2 table tbody tr:nth-child(odd) {
+        background-color: #D2DED2;
+    }
+
+    .table50-2 table tbody tr:nth-child(even) {
+        background-color: #EBF0EA;
+    }
+
+.item1 h5 {
+    width: 80%;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+}
+
+    .item1 h5 span {
+        color: #658c6f;
+    }
+
+.table50-3 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table50-3 table th {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .table50-3 table thead td {
+        font-size: 10px;
+    }
+
+    .table50-3 table,
+    .table50-3 table td,
+    .table50-3 table th {
+        padding: 5px;
+        text-align: center
+    }
+
+        .table50-3 table td {
+            text-align: right;
+        }
+
+        .table50-3 table thead {
+            background: #658C6F;
+            color: #fff;
+        }
+
+        .table50-3 table tbody tr:nth-child(even) {
+            background-color: #EBF0EA;
+        }
+
+        .table50-3 table tbody tr:nth-child(odd) {
+            background-color: #D2DED2;
+        }
+
+
+.table50-4 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table50-4 table th {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .table50-4 table thead td {
+        font-size: 10px;
+    }
+
+    .table50-4 table,
+    .table50-4 table td,
+    .table50-4 table th {
+        padding: 10px;
+        text-align: center
+    }
+
+        .table50-4 table thead {
+            background: #658C6F;
+            color: #fff;
+        }
+
+        .table50-4 table tbody tr:nth-child(even) {
+            background-color: #EBF0EA;
+        }
+
+        .table50-4 table tbody tr:nth-child(odd) {
+            background-color: #D2DED2;
+        }
+
+        .table50-4 table tbody #a td {
+            text-align: right;
+        }
+
+        .table50-4 table tbody #a {
+            background-color: #EBF0EA;
+            font-weight: bold;
+        }
+/********************60*************************/
+
+.row .x h5 {
+    font-weight: bold;
+    color: #658c6f;
+}
+
+.table60-1 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table60-1 table th {
+        font-size: 17px;
+    }
+
+    .table60-1 table thead td {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .table60-1 table,
+    .table60-1 table td,
+    .table60-1 table th {
+        padding: 7px;
+        text-align: center;
+    }
+
+        .table60-1 table th {
+            background: #658C6F;
+            color: #fff;
+        }
+
+        .table60-1 table tbody tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table60-1 table tbody tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+
+.table60-2 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table60-2 table th {
+        font-size: 17px;
+    }
+
+    .table60-2 table thead td {
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .table60-2 table,
+    .table60-2 table th,
+    .table60-2 table td {
+        text-align: center;
+        font-weight: bold;
+    }
+
+        .table60-2 table thead {
+            background-color: #658c6F;
+            color: FFF;
+        }
+
+        .table60-2 table tbody tr:nth-child(even) {
+            background-color: #EBF0EA;
+        }
+
+        .table60-2 table tbody tr:nth-child(odd) {
+            background-color: #D2DED2;
+        }
+
+.table60-3 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table60-3 table thead td {
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .table60-3 table,
+    .table60-3 table td {
+        padding: 7px;
+        text-align: right;
+        font-weight: bold;
+    }
+
+        .table60-3 table thead {
+            background-color: #658c6F;
+            color: FFF;
+        }
+
+        .table60-3 table tbody tr:nth-child(even) {
+            background-color: #EBF0EA;
+        }
+
+        .table60-3 table tbody tr:nth-child(odd) {
+            background-color: #D2DED2;
+        }
+/************************61************/
+.table61-1 table,
+.table61-2 table,
+.table61-3 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table61-1 table th,
+    .table61-2 table th {
+        font-size: 17px;
+    }
+
+    .table61-1 table thead td {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .table61-1 table,
+    .table61-1 table td,
+    .table61-1 table th {
+        padding: 7px;
+        text-align: center;
+    }
+
+        .table61-1 table th {
+            background: #658C6F;
+            color: #fff;
+        }
+
+        .table61-1 table tbody tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table61-1 table tbody tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+
+    .table61-2 table thead td {
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .table61-2 table,
+    .table61-2 table th,
+    .table61-2 table td {
+        padding: 3px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+        .table61-2 table thead {
+            background-color: #658c6F;
+            color: FFF;
+        }
+
+        .table61-2 table tbody tr:nth-child(even) {
+            background-color: #EBF0EA;
+        }
+
+        .table61-2 table tbody tr:nth-child(odd) {
+            background-color: #D2DED2;
+        }
+
+
+    .table61-3 table th {
+        font-size: 19px;
+    }
+
+    .table61-3 table thead td {
+        font-size: 13px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .table61-3 table,
+    .table61-3 table th,
+    .table61-3 table td {
+        padding: 5px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+        .table61-3 table thead {
+            background-color: #658c6F;
+            color: FFF;
+        }
+
+        .table61-3 table tbody tr:nth-child(even) {
+            background-color: #D2DED2;
+        }
+
+        .table61-3 table tbody tr:nth-child(odd) {
+            background-color: #EBF0EA;
+        }
+
+.table61-2 tbody #mxr h5,
+.table61-3 tbody #mxr h5 {
+    transform: rotate(-90deg);
+    color: #FFF;
+}
+/******************62*************/
+.table62-1 table,
+.table62-2 table,
+.table62-3 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table62-1 table th,
+    .table62-2 table th,
+    .table62-3 table th {
+        font-size: 14px;
+    }
+
+    .table62-1 table tbody td,
+    .table62-3 table tbody td {
+        font-size: 14px;
+        font-weight: bold;
+        padding: 5px;
+    }
+
+    .table62-1 table,
+    .table62-1 table td,
+    .table62-1 table th,
+    .table62-3 table,
+    .table62-3 table td,
+    .table62-3 table th {
+        padding: 3px;
+        text-align: center;
+    }
+
+        .table62-1 table th,
+        .table62-3 table th {
+            background: #658C6F;
+            color: #fff;
+        }
+
+        .table62-1 table tbody tr {
+            background-color: #D2DED2;
+        }
+
+        .table62-3 table tbody tr {
+            background-color: #ebf0ea;
+        }
+
+    .table62-2 table,
+    .table62-2 table th {
+        padding: 3px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+        .table62-2 table td {
+            padding: 2px;
+            text-align: right;
+        }
+
+        .table62-2 table thead {
+            background-color: #658c6F;
+            color: #FFF;
+        }
+
+        .table62-2 table tbody tr:nth-child(even) {
+            background-color: #EBF0EA;
+        }
+
+        .table62-2 table tbody tr:nth-child(odd) {
+            background-color: #D2DED2;
+        }
+/********************67*******/
+.table67-1 table,
+.table67-2 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table67-1 table td,
+    .table67-2 table td {
+        padding: 7px;
+        text-align: center;
+    }
+
+    .table67-1 table th,
+    .table67-2 table th,
+    .table67-2 table #ww {
+        background: #658C6F;
+        color: #fff;
+        font-size: 17px;
+        padding: 7px;
+        text-align: center;
+    }
+
+    .table67-1 table tbody td:nth-child(even) {
+        background-color: #D2DED2;
+    }
+
+    .table67-1 table tbody td:nth-child(odd) {
+        background-color: #EBF0EA;
+    }
+
+    .table67-2 table tbody tr:nth-child(even) {
+        background-color: #D2DED2;
+    }
+
+    .table67-2 table tbody tr:nth-child(odd) {
+        background-color: #EBF0EA;
+    }
+/*****************68***********/
+.table68 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table68 table td {
+        padding: 7px;
+        text-align: center;
+    }
+
+    .table68 table th {
+        background: #658C6F;
+        color: #fff;
+        font-size: 14px;
+        padding: 7px;
+        text-align: center;
+    }
+
+    .table68 table tbody tr:nth-child(even) {
+        background-color: #D2DED2;
+    }
+
+    .table68 table tbody tr:nth-child(odd) {
+        background-color: #EBF0EA;
+    }
+/*********69**********/
+.table69 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table69 table td {
+        padding: 7px;
+        text-align: center;
+    }
+
+    .table69 table th {
+        background: #658C6F;
+        color: #fff;
+        font-size: 14px;
+        padding: 7px;
+        text-align: center;
+    }
+
+    .table69 table tbody tr:nth-child(even) {
+        background-color: #D2DED2;
+    }
+
+    .table69 table tbody tr:nth-child(odd) {
+        background-color: #EBF0EA;
+    }
+/******************33*****/
+.table33-1 table,
+.table33-2 table,
+.table33-3 table {
+    width: 80%;
+    margin: 10px;
+}
+
+    .table33-1 table td {
+        padding: 7px;
+    }
+
+    .table33-2 table td {
+        padding: 7px;
+    }
+
+    .table33-1 table th,
+    .table33-2 table th {
+        background: #90AC95;
+        color: #fff;
+        font-size: 14px;
+        padding: 7px;
+    }
+
+    .table33-2 table th {
+        text-align: center;
+    }
+
+    .table33-1 table tbody tr:nth-child(even) {
+        background-color: #EBF0EA;
+    }
+
+    .table33-1 table tbody tr:nth-child(odd) {
+        background-color: #D2DED2;
+    }
+
+    .table33-2 table tbody tr:nth-child(even) {
+        background-color: #D2DED2;
+    }
+
+    .table33-2 table tbody tr:nth-child(odd) {
+        background-color: #EBF0EA;
+    }
+
+    .table33-3 table td {
+        padding-bottom: 75px;
+        background-color: #EBF0EA;
+    }
+
+    .table33-3 table th {
+        background: #658C6F;
+        color: #fff;
+        font-size: 14px;
+        padding: 7px;
+        text-align: center;
+    }

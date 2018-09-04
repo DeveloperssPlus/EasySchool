@@ -1,0 +1,55 @@
+﻿<html dir="rtl">
+<head>
+
+    <script src="../assets/global/arabicNumbers.js"></script>
+    <style type="text/css" media="print">
+        @page {
+            size: auto; /* auto is the initial value */
+            margin: 0mm; /* this affects the margin in the printer settings */
+        }
+
+        html {
+            /*background-color: #FFFFFF;*/
+            margin: 0px; /* this affects the margin on the html before sending to printer */
+        }
+
+        body {
+            /*border: solid 1px blue ;*/
+            margin: 10mm 15mm 10mm 15mm; /* margin you want for the content */
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="width: 100%; border: 1px solid #000; height:1020px;">
+        <div class="title" style="margin:auto; padding:2%" >
+            <img src="../assets/ministry.png" style="float:right;" alt="logo"  height="90" width="90">
+            <img src="{0}" alt="school" style="float:left;" height="90" width="90">
+               <div>
+            <img src="../assets/besm.png"  style="width:200px; display:block; height:20px; margin:auto; margin-top:3%; text-align:center" />
+               <h4 style="border:1px solid #000; padding:3px; width:200px; display:block; margin:auto; text-align:center; margin-top:3%;">
+                {1}
+               </h4>
+            </div>
+   <br><br>
+        </div>
+        <hr>
+        <div>
+            <nav style="margin:10px">
+                <h3 style="float:right;">عدد :{2}</h3>
+                <h3 style="float:left;">المشفوع : {3}</h3>
+                <h3 style="text-align:center;padding:20px">التاريخ: {4}</h3>
+            </nav>
+        </div>
+        <hr>
+        <article style="text-align:right;margin-right:25px">
+            <h4>إلـــى :  {5}</h4>
+            <h4>مــــن :  {6} </h4>
+            <h4>بشأن :  {7}</h4>
+        </article>
+        <div class="row" style="float:left; margin-left:25px; padding:5px;  bottom:30px; left:70px">
+              <h4>القائد التربوي</h4>
+              <h4>{8}</h4>
+        </div>
+    </div>
+</body>
+</html>

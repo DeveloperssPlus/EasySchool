@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class Finance_required : MyPermisionPage
+{
+    OnlineSchoolEntities onlineSchool = new OnlineSchoolEntities();
+    SchoolInformation SchoolInfo = new SchoolInformation();
+    protected override void OnPreInit(EventArgs e)
+    {
+        MyPer = "required";
+        base.OnPreInit(e);
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            DDLItem.DataBind();
+            CalendarFrom.DataBind();
+        }
+    }
+
+    protected void btnPrint_Click(object sender, EventArgs e)
+    {
+        Required require = new Required();
+
+
+        require.ItemID = Convert.ToInt32(DDLItem.SelectedValue);
+
+
+
+        if (txtAmount.Text != null)
+        {
+            require.Price = Convert.ToInt32(txtAmount.Text);
+        }
+
+        if (txtDate.Text != null && !string.IsNullOrEmpty(txtDate.Text.ToString()))
+        {
+            if (CalendarFrom.CultureName == "ar-SA")
+                require.Date = MyDate.convertHijriToGregorian(txtDate.Text);
+            else
+                require.Date = DateTime.ParseExact(txtDate.Text, "yyyy/MM/dd",CultureInfo.CreateSpecificCulture("ar-EG"));
+        }
+
+
+        int SchoolID = SchoolInfo.getId();
+        require.SchoolId = SchoolID;
+
+        require.SemesterId = MyDate.getCurrentSemesterId();
+
+        onlineSchool.Requireds.Add(require);
+        onlineSchool.SaveChanges();
+        ClientScript.RegisterStartupScript(this.GetType(), "openModal", "<script> addSuccess(' !! تمت الاضافة بنجاح'); </script>", false);
+
+
+    }
+}

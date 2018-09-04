@@ -1,0 +1,41 @@
+.sidebar .badge-rounded{border:none}
+.sidebar-mailbox.sidebar .sidebar-inner .nav-sidebar > li.active > a span.badge,.sidebar .sidebar-inner .nav-sidebar .badge-rounded{position:absolute;right:6px;top:6px}
+.sidebar-mailbox.sidebar .sidebar-inner .nav-sidebar > li.active > a{text-align:center}
+.sidebar-collapsed .topbar .header-left .topnav{float:left;height:50px;margin:0}
+.sidebar-mailbox.sidebar .sidebar-inner .nav-sidebar > li.active > a i{display:block;float:none!important;font-size:14px;line-height:40px;margin:-10px auto -7px;width:40px}
+.builder .builder-toggle,.builder:before{top:30%}
+.topbar .header-left .topnav .mmenu .dropdown.mmenu-fw .dropdown-menu{left:-140px}
+.boxed section .main-content{height:100%}
+.rtl.account #lockscreen-block .input-group .form-control{-webkit-border-radius:0 17px 17px 0;-moz-border-radius:0 17px 17px 0;border-radius:0 17px 17px 0}
+.rtl.account #lockscreen-block .user-image,.rtl.account #lockscreen-block .form-signin{float:right}
+.rtl.account #lockscreen-block .form-signin{padding-right:30px;padding-left:0}
+.rtl.account #lockscreen-block .user-image img{float:left}
+.rtl.account #lockscreen-block #loader{left:-1px;right:auto}
+.rtl .account-copyright{text-align:center}
+.rtl.error-page span,.rtl.error-page div,.rtl.error-page h3{text-align:center}
+.rtl .input-icon input{padding-right:34px!important;padding-left:12px!important}
+.rtl .input-icon i{position:absolute;right:0;left:auto}
+#page-builder { top: 115px; left: 0 !important;right:0!important;}
+.rtl .sidebar .menu-settings .dropdown-menu {right: auto;left: 0;float: left;text-align: right;}
+.rtl .fixed-topbar .topbar { z-index: 500;}
+@media (min-width: 1600px) {
+  .dashboard.boxed .col-clock, .dashboard.boxed .col-financial-stocks {display: none !important;}
+  .dashboard.boxed .col-visitors {width: 41.6666666%;}
+  .dashboard.boxed .col-small-stats {width: 50%;}
+  .dashboard.boxed .widget-stock .company-info {display: none}
+}
+@media screen and (min-width: 1024px) {
+  .sidebar-top .sidebar .nav > li .children{left:auto;right:0}
+  .rtl .sidebar .sidebar-inner .nav-sidebar .children > li > a{padding:7px 20px 7px 59px}
+  .boxed.sidebar-top .sidebar .nav > li > a {padding: 10px 13px 12px;}
+}
+@media only screen and (min-width: 1170px) {
+  #timeline .timeline-block .timeline-content::before{border-right-color:#fff;border-left:none}
+  #timeline .timeline-block:nth-child(even) .timeline-content{float:left}
+  #timeline .timeline-block:nth-child(even) .timeline-content::before{border-left:7px solid #fff;border-right:none;left:100%;right:auto}
+}
+.boxed.fixed-topbar section .main-content .topbar { position: fixed}
+.boxed.fixed-topbar.sidebar-show > section{ overflow: hidden;}
+@media screen and (max-width: 1024px){
+  .sidebar-show .topbar {width: 100%;}
+}

@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="rtl" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="admin-themes-lab">
+    <meta name="author" content="themes-lab">
+    <link rel="shortcut icon" href="images/favicon-96x96.png" type="image/png">
+    <title>Make Admin Template &amp; Builder</title>
+    <link href="../../global/css/style.css" rel="stylesheet" />
+    <link href="../../global/css/theme.css" rel="stylesheet" />
+    <link href="../../global/css/ui.css" rel="stylesheet" />
+
+    <link href="../../admin/layout1/css/layout.css" rel="stylesheet">
+    <!-- BEGIN PAGE STYLE -->
+    <link href="../../global/plugins/datatables/dataTables.min.css" rel="stylesheet">
+    <link href="plugins/slider-pips/jquery-ui-slider-pips.css" rel="stylesheet">
+<link href="custom-style.css" rel="stylesheet">
+    <!-- END PAGE STYLE -->
+    <script src="../../global/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+
+<body class="rtl color-default builder-page">
+    <!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <section> 
+
+        <div class="main-content ">
+            <!-- BEGIN TOPBAR -->
+                 <nav class="navbar navbar-default topbar ">
+                <div class="container">
+               
+                     <div class="navbar-header">
+   
+                          <a class="navbar-brand" href="#">
+        <!--img alt="Brand" src="images/logo2.png"-->
+      </a>
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="first">
+               <div class="header-right">
+              <ul class="header-menu nav navbar-nav hidden-xs">
+                        <li class="dropdown" id="language-header">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> <i class="icon-globe"></i> </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#" data-lang="en"><img src="../../global/images/flags/usa.png" alt="flag-english"> <span>English</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-lang="es"><img src="../../global/images/flags/spanish.png" alt="flag-english"> <span>Español</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-lang="fr"><img src="../../global/images/flags/french.png" alt="flag-english"> <span>Français</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="notifications-header">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> <i class="icon-bell"></i> <span class="badge badge-danger badge-header">6</span> </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header clearfix">
+                                    <p class="pull-left">12 Pending Notifications</p>
+                                </li>
+                                <li>
+                                    <ul class="dropdown-menu-list withScroll" data-height="220">
+                                        <li>
+                                            <a href="#"> <i class="fa fa-star p-r-10 f-18 c-orange"></i> Steve have rated your photo <span class="dropdown-time">Just now</span> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> <i class="fa fa-heart p-r-10 f-18 c-red"></i> John added you to his favs <span class="dropdown-time">15 mins</span> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> <i class="fa fa-file-text p-r-10 f-18"></i> New document available <span class="dropdown-time">22 mins</span> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> <i class="fa fa-picture-o p-r-10 f-18 c-blue"></i> New picture added <span class="dropdown-time">40 mins</span> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> <i class="fa fa-bell p-r-10 f-18 c-orange"></i> Meeting in 1 hour <span class="dropdown-time">1 hour</span> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> <i class="fa fa-bell p-r-10 f-18"></i> Server 5 overloaded <span class="dropdown-time">2 hours</span> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> <i class="fa fa-comment p-r-10 f-18 c-gray"></i> Bill comment your post <span class="dropdown-time">3 hours</span> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> <i class="fa fa-picture-o p-r-10 f-18 c-blue"></i> New picture added <span class="dropdown-time">2 days</span> </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-footer clearfix"> <a href="#" class="pull-left">See all notifications</a>
+                                    <a href="#" class="pull-right"> <i class="icon-settings"></i> </a>
+                                </li>
+                            </ul>
+                        </li>
+                   
+                        <li class="dropdown" id="user-header">
+                            <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> <img src="../../global/images/avatars/user1.png" alt="user image"> </a>
+                            <ul class="dropdown-menu">
+                                <li> <a href="#"><i class="icon-user"></i><span>My Profile</span></a> </li>
+                                <li> <a href="#"><i class="icon-calendar"></i><span>My Calendar</span></a> </li>
+                                <li> <a href="#"><i class="icon-settings"></i><span>Account Settings</span></a> </li>
+                                <li> <a href="#"><i class="icon-logout"></i><span>Logout</span></a> </li>
+                            </ul>
+                        </li>
+                
+                   </ul></div>
+                     
+           </div>
+                </div></nav>
+         
+            <!-- BEGIN PAGE CONTENT -->
+
+           
+            <!-- END TOPBAR -->
+            <nav class="navbar navbar-default secbar">
+                <div class="container">
+               
+                     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav ">
+                            <li><a href="main.html"><i class="icon-home"></i><span> الرئيسية </span></a></li>
+                            <li class="nav-parent  active"> <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30" aria-expanded="false"><i class="icon-notebook"></i><span>سجل العمل الرسمي</span> <i class="icons-arrows-06"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/EmployeeAttendence/AttendenceAdd.aspx">الحضور اليومي</a></li>
+                                    <li><a href="/EmployeeAttendence/AttendenceReport.aspx">التقرير اليومي</a></li>
+                                    <li><a href="/EmployeeAttendence/AbsenceDisplay.aspx">عرض غياب</a></li>
+                                    <li class="active"><a href="/EmployeeAttendence/LatnessAdd.aspx">اضافة تأخر</a></li>
+                                    <li><a href="/EmployeeAttendence/PermissionAdd.aspx">اضافة استئذان</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-parent">
+                                <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30" aria-expanded="false"> <i class="icon-bulb"></i><span>الاتصالات الادارية</span> <i class="icons-arrows-06"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">إنشاء جديد</a></li>
+                                    <li><a href="#">إدارة الوارد</a></li>
+                                    <li><a href="#">إدارة الصادر</a></li>
+                                    <li><a href="#">تعميم التعاميم على الموظفين</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-parent"> <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="30" aria-expanded="false"><i class="fa fa-cog"></i><span>الإعدادات </span> <i class="icons-arrows-06"></i> </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/School/PrivateSettings.aspx">الاعدادات الخاصة</a></li>
+                                    <li><a href="/ImportExcel/AddExcel.aspx">اضافة الموظفين</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                
+           </div>
+                </div></nav>
+            
+            <div class="page-content page-builder">
+                
+            <div class="container">
+                    <div class="col-md-12">
+                    <div class="col-md-3">
+                       <div class="panel" style="
+    height: 330px;
+">
+                        <div class="panel-header ">
+               <div class="text-center md-margin-bottom-50">
+                    <h4 class="headline">
+                          <img alt="logo" src="images/logo2.png" style="
+    margin-bottom: 25px;">
+                        <!--i class="fa fa-university" aria-hidden="true"></i-->
+                        <asp:Literal ID="ltrSchoolName" runat="server" >مدرسة عباد الرحمن</asp:Literal></h4>
+                   <h5>
+                        <asp:Literal ID="ltrSemester" runat="server">الفصل الدراسي الاول</asp:Literal></h5>
+                    <h5>
+                        <asp:Literal ID="ltrYear" runat="server">1437-1438</asp:Literal></h5>
+                
+                       <br/>
+                </div>
+                           </div></div>
+  
+          </div>
+      
+      
+
+       
+                      
+                        <div class="col-md-9">
+                          <div class="panel">
+                        <div class="panel-header ">
+                            <h3><i class="icon-user"></i> إضافة <strong> تأخر الموظفين </strong></h3> </div>
+                        <div class="panel-body">
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="form-group"> <span id="mainContent_mainContent_Label3">اسم الموظف :</span>
+                                            <select name="ctl00$ctl00$mainContent$mainContent$ddlNameEMp" id="mainContent_mainContent_ddlNameEMp" class="chosen-select AutherDrop form-control form-white"> </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="form-group"> <span id="mainContent_mainContent_lblSource">التاريخ :</span>
+                                            <input name="ctl00$ctl00$mainContent$mainContent$datepicker" type="text" id="mainContent_mainContent_datepicker" class="datepicker form-control form-white"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="form-group"> <span id="mainContent_mainContent_Label2">نوع التأخر :</span>
+                                            <select name="ctl00$ctl00$mainContent$mainContent$ddlType" id="mainContent_mainContent_ddlType" class="form-control form-white"> </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="form-group"> <span id="mainContent_mainContent_Label1">مدة التأخر (بالدقائق) :</span>
+                                            <input name="ctl00$ctl00$mainContent$mainContent$txtamount" type="number" id="mainContent_mainContent_txtamount" class="form-control form-white"> <span id="mainContent_mainContent_RequiredFieldValidator1" style="color:Red;visibility:hidden;">أدخل مدة التأخر</span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <input type="submit" name="ctl00$ctl00$mainContent$mainContent$btnAdd" value="اضافة" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$mainContent$mainContent$btnAdd&quot;, &quot;&quot;, true, &quot;btn&quot;, &quot;&quot;, false, false))" id="mainContent_mainContent_btnAdd" class="btn red-haze btn btn-primary"> <span id="mainContent_mainContent_lblmsg" style="color:#0066FF;"></span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+            <!-- END PAGE CONTENT -->
+        </div>
+        <!-- END MAIN CONTENT -->
+    </section>
+    <!-- BEGIN SEARCH -->
+    <div id="morphsearch" class="morphsearch">
+        <form class="morphsearch-form">
+            <input class="morphsearch-input" type="search" placeholder="Search..." />
+            <button class="morphsearch-submit" type="submit">Search</button>
+        </form>
+        <div class="morphsearch-content withScroll">
+            <div class="dummy-column user-column">
+                <h2>Users</h2>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/avatars/avatar1_big.png" alt="Avatar 1" />
+                    <h3>John Smith</h3> </a>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/avatars/avatar2_big.png" alt="Avatar 2" />
+                    <h3>Bod Dylan</h3> </a>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/avatars/avatar3_big.png" alt="Avatar 3" />
+                    <h3>Jenny Finlan</h3> </a>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/avatars/avatar4_big.png" alt="Avatar 4" />
+                    <h3>Harold Fox</h3> </a>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/avatars/avatar5_big.png" alt="Avatar 5" />
+                    <h3>Martin Hendrix</h3> </a>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/avatars/avatar6_big.png" alt="Avatar 6" />
+                    <h3>Paul Ferguson</h3> </a>
+            </div>
+            <div class="dummy-column">
+                <h2>Articles</h2>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/gallery/1.jpg" alt="1" />
+                    <h3>How to change webdesign?</h3> </a>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/gallery/2.jpg" alt="2" />
+                    <h3>News From the sky</h3> </a>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/gallery/3.jpg" alt="3" />
+                    <h3>Where is the cat?</h3> </a>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/gallery/4.jpg" alt="4" />
+                    <h3>Just another funny story</h3> </a>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/gallery/5.jpg" alt="5" />
+                    <h3>How many water we drink every day?</h3> </a>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/gallery/6.jpg" alt="6" />
+                    <h3>Drag and drop tutorials</h3> </a>
+            </div>
+            <div class="dummy-column">
+                <h2>Recent</h2>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/gallery/7.jpg" alt="7" />
+                    <h3>Design Inspiration</h3> </a>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/gallery/8.jpg" alt="8" />
+                    <h3>Animals drawing</h3> </a>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/gallery/9.jpg" alt="9" />
+                    <h3>Cup of tea please</h3> </a>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/gallery/10.jpg" alt="10" />
+                    <h3>New application arrive</h3> </a>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/gallery/11.jpg" alt="11" />
+                    <h3>Notification prettify</h3> </a>
+                <a class="dummy-media-object" href="#"> <img src="../../global/images/gallery/12.jpg" alt="12" />
+                    <h3>My article is the last recent</h3> </a>
+            </div>
+        </div>
+        <!-- /morphsearch-content --><span class="morphsearch-close"></span> </div>
+    <!-- END SEARCH -->
+    <!-- BEGIN PRELOADER -->
+    <div class="loader-overlay">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- END PRELOADER -->
+    <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
+    
+    <script src="../../global/plugins/jquery/jquery-1.11.1.min.js"></script>
+   
+    <!-- A mobile and touch friendly input spinner component for Bootstrap -->
+    <!-- Visible in Viewport -->
+    <script src="../../global/js/application.js"></script>
+    <!-- Main Application Script -->
+  <script src="../../global/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- BEGIN PAGE SCRIPTS -->
+
+</body>
+
+</html>

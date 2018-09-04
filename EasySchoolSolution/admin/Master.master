@@ -1,0 +1,242 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar-sa" class="rtl" dir="rtl">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content="admin-themes-lab" />
+    <meta name="author" content="themes-lab" />
+    <link rel="shortcut icon" href="images/favicon-96x96.png" type="image/png" />
+    <title>Easy School</title>
+    <link href="<%=Page.ResolveUrl("~/")%>assets/global/css/style.css" rel="stylesheet" />
+    <link href="<%=Page.ResolveUrl("~/")%>assets/global/css/theme.css" rel="stylesheet" />
+    <link href="<%=Page.ResolveUrl("~/")%>assets/global/css/ui.css" rel="stylesheet" />
+    <link href="<%=Page.ResolveUrl("~/")%>assets/global/css/style.css" rel="stylesheet" />
+    <link href="<%=Page.ResolveUrl("~/")%>assets/global/css/theme.css" rel="stylesheet" />
+    <link href="<%=Page.ResolveUrl("~/")%>assets/global/css/ui.css" rel="stylesheet" />
+    <link href="<%=Page.ResolveUrl("~/")%>assets/admin/layout1/css/layout.css" rel="stylesheet" />
+    <!-- BEGIN PAGE STYLE -->
+    <link href="<%=Page.ResolveUrl("~/")%>assets/global/plugins/datatables/dataTables.min.css" rel="stylesheet" />
+    <!--<link href="plugins/slider-pips/jquery-ui-slider-pips.css" rel="stylesheet">-->
+    <link href="<%=Page.ResolveUrl("~/")%>assets/admin/page-builder/plugins/slider-pips/jquery-ui-slider-pips.css" rel="stylesheet" />
+    <link href="<%=Page.ResolveUrl("~/")%>assets/admin/page-builder/custom-style.css" rel="stylesheet" />
+    <!--<link href="custom-style.css" rel="stylesheet">-->
+    <!-- END PAGE STYLE -->
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/jquery/jquery-1.11.1.min.js"></script>
+
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/noty/jquery.noty.packaged.min.js"></script>
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/js/pages/notifications.js"></script>
+
+    <style>
+        .school-logo {
+            text-align: center !important;
+        }
+
+        @media (min-width: 992px) {
+            .page-content .bar {
+                width: 20%;
+            }
+
+            .page-content .main-content {
+                padding-right: 3%;
+                width: 80%;
+            }
+
+            .md-margin-bottom-50 {
+                margin-bottom: 50px;
+            }
+        }
+
+        .page-content .bar .headline {
+            /*font-weight: bold;*/
+        }
+    </style>
+
+
+    <script>
+        function addSuccess(text) {
+            NotifContent = $('#preview').find('.alert').html(),
+          autoClose = true;
+            type = 'success';
+            notifContent = '<div class="alert alert-success media fade in  pull-right"><p> ' + text + '.</p></div>';
+            method = 3000;
+            position = 'topCenter';
+            container = '';
+            generate(position, container, notifContent, true, type);
+        }
+
+        function addfalied(text) {
+            NotifContent = $('#preview').find('.alert').html(),
+          autoClose = true;
+            type = 'danger';
+            notifContent = '<div class="alert alert-danger media fade in pull-right"><p> ' + text + '.</p></div>';
+            method = 3000;
+            container = '';
+            position = 'topCenter';
+            generate(position, container, notifContent, true, type);
+        }
+    </script>
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="rtl color-default builder-page">
+
+    <form id="form1" runat="server">
+        <section>
+            <div class="main-content ">
+                <!-- BEGIN TOPBAR -->
+                <nav class="navbar navbar-default topbar ">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">
+                                <!--img alt="Brand" src="images/logo2.png"-->
+                            </a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="first">
+                            <div class="header-right">
+                                <ul class="header-menu nav navbar-nav hidden-xs">
+                             <%--       <li class="dropdown" id="language-header">
+                                        <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"><i class="icon-globe"></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <asp:LinkButton ID="lnkHijri" runat="server" OnClick="lnkHijri_Click"><span>هجري</span></asp:LinkButton>
+                                            </li>
+                                            <li>
+                                                <asp:LinkButton ID="lnkGregorian" runat="server" OnClick="lnkGregorian_Click"><span>ميلادي</span></asp:LinkButton>
+                                            </li>
+                                        </ul>
+                                    </li>--%>
+                                    <li class="dropdown" id="notifications-header">
+                                        <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"><i class="icon-bell"></i><span class="badge badge-danger badge-header"><%--6--%></span> </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-header clearfix">
+                                                <p class="pull-left">الاشعارات </p>
+                                            </li>
+                                            <li>
+                                                <ul class="dropdown-menu-list withScroll" data-height="220">
+                                                    <li>
+                                                        <%--    <a href="#">
+                                                    <i class="fa fa-star p-r-10 f-18 c-orange"></i>
+                                                    Steve have rated your photo
+                       
+                                                    <span class="dropdown-time">Just now</span>
+                                                </a>--%>
+                                                لا يوجد اشعارات حاليا
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+                                            <%--        <li class="dropdown-footer clearfix">
+                                        <a href="#" class="pull-left">كافة الاشعارات</a>
+                                        <a href="#" class="pull-right">
+                                            <i class="icon-settings"></i>
+                                        </a>
+                                    </li>--%>
+                                        </ul>
+
+                                    </li>
+                                    <li class="dropdown" id="user-header">
+                                        <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                            <%--<img src="../assets/global/images/avatars/user1.png" alt="user image">--%>
+                                            <asp:Image ID="imgProfile" runat="server" alt="user image" />
+                                            <span class="username">
+                                                <asp:Literal ID="ltrUsername" runat="server"></asp:Literal></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="#"><i class="fa fa-key"></i><span>تغيير كلمة المرور</span></a>
+                                            </li>
+                                            <li>
+                                                <asp:LinkButton ID="logout" runat="server" OnClick="logout_Click">
+                                            <i class="icon-logout"></i><span>تسجيل الخروج</span> </asp:LinkButton>
+                                                <%--<asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText="  تسجيل الخروج     "  CssClass="icon-logout"/>--%>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- BEGIN PAGE CONTENT -->
+
+
+                <!-- END TOPBAR -->
+                <nav class="navbar navbar-default secbar">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" style="font-size: 12px;" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav ">
+                                <li><a href="Default.aspx"><i class="icon-home"></i><span>الرئيسية</span></a></li>
+                                <li class="nav-parent">
+                                    <a href="AddSchool.aspx" id="lnkAdd" runat="server"><i class="fa fa-plus"></i><span>اضافة مدرسة جديدة</span> <span class="fa arrow"></span></a>
+                                </li>
+                                <li class="nav-parent">
+                                    <a href="ManageSchools.aspx"><i class="fa fa-university"></i><span>ادارة المدارس</span> <span class="fa arrow"></span></a>
+                                </li>
+                                <li class="nav-parent">
+                                    <a href="ConstantsAdd.aspx"><i class="fa fa-arrow-circle-down"></i><span>ادارة الثوابت</span> <span class="fa arrow"></span></a>
+
+                                </li>
+                                <li class="nav-parent">
+                                    <a href="GeneralSettings.aspx"><i class="fa fa-cog"></i><span>الإعدادات </span><span class="fa arrow"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="page-content page-builder">
+                    <div class="container">
+                        <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <!-- END PAGE CONTENT -->
+            </div>
+            <!-- END MAIN CONTENT -->
+        </section>
+        <%--        <div class="loader-overlay">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+        --%>
+    </form>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
+
+
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/js/application.js"></script>
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/jquery-ui/jquery-ui-1.11.2.min.js"></script>
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/jquery-cookies/jquery.cookies.min.js"></script>
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/jquery-block-ui/jquery.blockUI.min.js"></script>
+    <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="<%=Page.ResolveUrl("~/")%>assets/admin/layout4/js/layout.js"></script>
+
+    <!-- Notifications -->
+    <asp:ContentPlaceHolder ID="scripts" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

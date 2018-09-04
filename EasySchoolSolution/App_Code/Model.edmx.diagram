@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0362cbec6d0246ad9fc6f7f739e31293" Name="Diagram1" ZoomLevel="58">
+        <EntityTypeShape EntityType="OnlineSchoolModel.AbsenceAlert" PointX="0.75" PointY="25.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.AbsenceDecision" PointX="24.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Absence" PointX="17.75" PointY="24.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.aspnet_Membership" PointX="3" PointY="4.125" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.aspnet_Roles" PointX="0.75" PointY="9.5" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.aspnet_Users" PointX="0.75" PointY="4" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Attendence" PointX="15.75" PointY="24.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Book" PointX="10.75" PointY="24.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.BorrowsofEmployee" PointX="4.75" PointY="24.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.BorrowsofStudent" PointX="23.75" PointY="17.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.ChangeLog" PointX="8.75" PointY="21.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.ChemistryCupboard" PointX="23.75" PointY="13.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Communication" PointX="23.75" PointY="9.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Constant" PointX="23.75" PointY="6.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.ConstantsType" PointX="23.75" PointY="3.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Councile" PointX="13.75" PointY="22.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.CouncilMember" PointX="22.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.DailyShift" PointX="21.75" PointY="19.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.EmployeesVacation" PointX="21.75" PointY="16.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.EmployeeWaiting" PointX="21.75" PointY="12.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.EventLogged" PointX="21.75" PointY="7.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.ExpensesProgram" PointX="23.75" PointY="21.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Experience" PointX="19.75" PointY="24.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Grades1" PointX="23.75" PointY="26.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Grades2" PointX="27.75" PointY="27.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Grades3" PointX="27.75" PointY="23.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Grades4" PointX="27.75" PointY="20.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Grades5" PointX="27.75" PointY="16.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Grades6" PointX="27.75" PointY="12.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.GuidProgram" PointX="27.75" PointY="8.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.HelpStudent" PointX="27.75" PointY="4.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.IncentivesForEmployee" PointX="27.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Incoming" PointX="25.75" PointY="26.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.IncomingsImage" PointX="25.75" PointY="23.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Job" PointX="5.75" PointY="9.25" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.LaboratoriesInventory" PointX="21.75" PointY="25.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Laboratory" PointX="25.75" PointY="19.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.LatenessAlert" PointX="25.75" PointY="16.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.LatenessDecision" PointX="12.75" PointY="25.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Lateness" PointX="25.75" PointY="11.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.LibraryClassVisit" PointX="25.75" PointY="7.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.LibraryDailyVisit" PointX="6.75" PointY="25.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Material" PointX="25.75" PointY="3.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Message" PointX="2.75" PointY="28.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.MissingMaterial" PointX="21.75" PointY="3.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Notification" PointX="19.75" PointY="20.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Obligation" PointX="13.75" PointY="15.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Outcoming" PointX="15.75" PointY="8.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.OutstandingStudent" PointX="4.75" PointY="15.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.PermissionAlert" PointX="15.75" PointY="4.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.PermissionGroup" PointX="2.75" PointY="15.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Permission" PointX="0.75" PointY="14.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.PermissionsClass" PointX="14.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Profile" PointX="13.75" PointY="12.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Purchase" PointX="13.75" PointY="8.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Repository" PointX="13.75" PointY="4.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Required" PointX="9.75" PointY="12.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Revenue" PointX="9.75" PointY="7.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Schedual" PointX="4.75" PointY="12.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.SchoolFund" PointX="12.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.SchoolResourceBox" PointX="11.75" PointY="8.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.School" PointX="5.75" PointY="1.125" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Semester" PointX="11.75" PointY="4.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Setting" PointX="2.75" PointY="10.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.StudentActivity" PointX="0.75" PointY="10.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.StudentPatient" PointX="10.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Student" PointX="7.75" PointY="7.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.StudentsAbsence" PointX="11.75" PointY="12.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.StudentsAttendence" PointX="15.75" PointY="14.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.StudentsGuide" PointX="4.75" PointY="19.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.StudentsInActivity" PointX="17.75" PointY="20.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.StudentsLateness" PointX="11.75" PointY="20.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.StudentsNote" PointX="20.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.StudentsPermission" PointX="19.75" PointY="16.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.StudentsSubject" PointX="15.75" PointY="19.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.StudentsViolation" PointX="19.75" PointY="13.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Subject" PointX="19.75" PointY="10.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.SubjectsInSemester" PointX="19.75" PointY="7.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.SubjectTable" PointX="6.75" PointY="19.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.SupportStudent" PointX="19.75" PointY="3.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Task" PointX="9.75" PointY="16.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Teacher" PointX="2.75" PointY="19.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.TeachersSubject" PointX="0.75" PointY="19.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.UsersGeneralization" PointX="18.75" PointY="0.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.UsersTask" PointX="17.75" PointY="16.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Violation" PointX="17.75" PointY="13.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.ViolationsAction" PointX="17.75" PointY="10.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.ViolationsActionsForm" PointX="17.75" PointY="7.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Visit" PointX="17.75" PointY="3.75" Width="1.5" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Week" PointX="16.75" PointY="0.75" Width="1.5" />
+        <AssociationConnector Association="OnlineSchoolModel.FK__aspnet_Me__UserI__2180FB33" />
+        <AssociationConnector Association="OnlineSchoolModel.FK_PermissionGroup_aspnet_Roles" />
+        <AssociationConnector Association="OnlineSchoolModel.aspnet_UsersInRoles" />
+        <EntityTypeShape EntityType="OnlineSchoolModel.Employee" Width="1.5" PointX="8" PointY="1.5" />
+        <AssociationConnector Association="OnlineSchoolModel.FK_Employees_Jobs" />
+        <AssociationConnector Association="OnlineSchoolModel.FK_Employees_Schools" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,80 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MyTasks.aspx.cs"  Inherits="Employee_MyTasks" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="mainContent" Runat="Server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+     <div class="col-lg-12 portlets">
+              <div class="panel">
+            <div class="panel-header">
+                <h3><i class="icon-bulb"></i><strong>مهامي</strong> </h3>
+            </div>
+            <div class="panel-content">
+                <asp:ListView ID="LstMyTask"  OnDataBinding="LstMyTask_DataBinding" runat="server"  >
+
+                    <LayoutTemplate>
+                        <table class="table table-hover table-dynamic">
+                            <thead>
+                                <tr>
+                                    <th>
+
+                                    </th>
+                                    <th>
+                                        <div class="m-b-10">المهمة</div>
+                                    </th>
+                                     <th>
+                                        <div class="m-b-10">شرح المهمة</div>
+                                    </th>
+                                    <th>
+                                        <div class="m-b-10">تاريخ الانتهاء</div>
+                                    </th>
+                              
+                                </tr>
+                            </thead>
+
+                            <tr id="itemPlaceholder" runat="server"></tr>
+                        </table>
+                    </LayoutTemplate>
+
+                    <ItemTemplate>
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblcheck" CssClass="fa fa-check" runat="server" style="font-size:25px;color:green"></asp:Label>
+
+                            </td>
+                            <td>
+                                <asp:HiddenField ID="taskId" runat="server" Value='<%# Eval("taskId") %>' />
+                                  <a  href="MyTaskDetail.aspx?Taskid=<%# Eval("taskId") %>&&userId=<%# Eval("UserId") %>" >
+                                      <%# Eval("TitleTask") %>
+                                  </a>
+                            </td>
+                             <td>
+                                <asp:Label ID="lblDescription" runat="server" Text='<%# Eval("DescriptionTask") %>'></asp:Label></td>
+                            
+                            <td>
+                                <asp:Label ID="lblEndDate" runat="server" Text='<%#MyDate.getDate(Eval("EndDate").ToString())%>'></asp:Label></td>
+                      <%--      <td>
+                                  <a  href="MyTaskDetail.aspx?Taskid=<%# Eval("taskId") %>&&userId=<%# Eval("UserId") %> "    class="btn  bg-primary">تفاصيل المهمة</a>
+                                </td>--%>
+                           <%-- OnClick="btnDone_Click"--%>
+                        </tr>
+                    </ItemTemplate>
+                    <EmptyDataTemplate>
+                        <h2>لايوجد مهام</h2>
+                    </EmptyDataTemplate>
+
+
+
+                </asp:ListView>
+               
+        </div>
+    </div>
+         </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="scripts" Runat="Server">
+    
+     <script src="<%=Page.ResolveUrl("~/")%>assets/global/plugins/datatables/jquery.dataTables.min.js"></script> <!-- Tables Filtering, Sorting & Editing -->
+     <script src="<%=Page.ResolveUrl("~/")%>assets/global/js/pages/table_dynamic.js"></script>
+     <script src="<%=Page.ResolveUrl("~/")%>assets/global/js/plugins.js"></script>
+</asp:Content>
+

@@ -1,0 +1,37 @@
+.sidebar-mailbox.sidebar .sidebar-inner .nav-sidebar > li.active > a span.badge,.sidebar .sidebar-inner .nav-sidebar .badge-rounded{position:absolute;right:55px}
+.sidebar-mailbox.sidebar .sidebar-inner .nav-sidebar > li.active > a{text-align:center}
+.sidebar-collapsed:not(.boxed) .topbar .header-left .topnav{float:left;height:50px;margin:0}
+.sidebar-mailbox.sidebar .sidebar-charts{margin-bottom:10px}
+.rtl.account #lockscreen-block .input-group .btn{-webkit-border-radius:17px 0 0 17px;-moz-border-radius:17px 0 0 17px;border-radius:17px 0 0 17px}
+.rtl.account #lockscreen-block .input-group .form-control{-webkit-border-radius:0 17px 17px 0;-moz-border-radius:0 17px 17px 0;border-radius:0 17px 17px 0}
+.rtl.account #lockscreen-block .user-image,.rtl.account #lockscreen-block .form-signin{float:right}
+.rtl.account #lockscreen-block .form-signin{padding-right:30px;padding-left:0}
+.rtl.account #lockscreen-block .user-image img{float:left}
+.rtl.account #lockscreen-block #loader{left:-1px;right:auto}
+.rtl .account-copyright{text-align:center}
+.rtl.error-page span,.rtl.error-page div,.rtl.error-page h3{text-align:center}
+.rtl .input-icon input{padding-right:34px!important;padding-left:12px!important}
+.rtl .input-icon i{position:absolute;right:0;left:auto}
+.boxed.fixed-topbar .main-content .page-content { margin-top: 50px;}
+.rtl .sidebar .menu-settings .dropdown-menu {right: auto;left: 0;float: left;text-align: right;}
+@media (min-width: 1600px) {
+  .dashboard.boxed .col-clock, .dashboard.boxed .col-financial-stocks {display: none !important;}
+  .dashboard.boxed .col-visitors {width: 41.6666666%;}
+  .dashboard.boxed .col-small-stats {width: 50%;}
+  .dashboard.boxed .widget-stock .company-info {display: none}
+}
+@media only screen and (min-width: 1170px) {
+  #timeline .timeline-block .timeline-content::before{border-right-color:#fff;border-left:none}
+  #timeline .timeline-block:nth-child(even) .timeline-content{float:left}
+  #timeline .timeline-block:nth-child(even) .timeline-content::before{border-left:7px solid #fff;border-right:none;left:100%;right:auto}
+}
+.boxed.fixed-topbar section .main-content .topbar { position: fixed}
+.boxed.fixed-topbar.sidebar-show > section{ overflow: hidden;}
+.boxed.rtl .sidebar {right: auto !important}
+@media screen and (max-width: 1024px){
+  .sidebar-show.fixed-topbar .topbar { width: 100%;}
+}
+@media (min-width: 1024px) {
+  .boxed.sidebar-collapsed .sidebar { top: 0;}
+  .boxed.fixed-topbar.sidebar-show > section {overflow: visible; }
+}
