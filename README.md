@@ -5,6 +5,8 @@
 # 
 النظام كامل يمكن استخدامه مباشرة
 # 
+لغة البرمجة هي ASP.NET
+# 
 ![Easy School 1](https://developers.ps/Files/EasySchool/Easy0.png)
 # 
 ![Easy School 1](https://developers.ps/Files/EasySchool/Easy1.png)
